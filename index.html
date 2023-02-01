@@ -27,8 +27,8 @@
             </div>
             <select class="form-select input-group-text" style="position: absolute; width: 15%; right: 0; height: 50px; text-align: start; " aria-label="Default select example" id="satuanPanjang">
               <option value="1" selected>m</option>
-              <option value="2">cm</option>
-              <option value="3">mm</option>
+              <option value="0.01">cm</option>
+              <option value="0.001">mm</option>
             </select>
           </div>
       </div>
@@ -40,8 +40,8 @@
             </div>
             <select class="form-select input-group-text" style="position: absolute; width: 15%; right: 0; height: 50px; text-align: start; " aria-label="Default select example" id="satuanLebar">
               <option value="1" selected>m</option>
-              <option value="2">cm</option>
-              <option value="3">mm</option>
+              <option value="0.01">cm</option>
+              <option value="0.001">mm</option>
             </select>
           </div>
       </div>
@@ -53,8 +53,8 @@
             </div>
             <select class="form-select input-group-text" style="position: absolute; width: 15%; right: 0; height: 50px; text-align: start; " aria-label="Default select example" id="satuanTinggi">
               <option value="1" selected>m</option>
-              <option value="2">cm</option>
-              <option value="3">mm</option>
+              <option value="0.01">cm</option>
+              <option value="0.001">mm</option>
             </select>
           </div>
         </div>
@@ -65,29 +65,34 @@
               <label for="selimutBalok" style="line-height: 12px;">Selimut Balok</label>
             </div>
             <select class="form-select input-group-text" style="position: absolute; width: 15%; right: 0; height: 50px; text-align: start; " aria-label="Default select example" id="satuanSelimut">
-              <option value="1" selected>mm</option>
-              <option value="2">cm</option>
-              <option value="3">m</option>
+              <option value="0.001" selected>mm</option>
+              <option value="0.01">cm</option>
+              <option value="1">m</option>
             </select>
           </div>
           <div class="form-text mb-3">dilapangan disebut juga tahu beton, atau decking (concrete decking)</div>
           </div>
           
           <div class="col-md-6 mb-3" ><select class="form-select" aria-label="Default select example" style="height: 50px;"
-            style="height: 50px;" id="tulanganUatama">
-            <option selected>Tulangan Utama</option>
-            <option value="1">One</option>
-            <option value="2">Two</option>
-            <option value="3">Three</option>
+            style="height: 50px;" id="tulanganUtama">
+            <option value="55" selected>Tulangan Utama</option>
+            <option value="1">D6</option>
+            <option value="2">D8</option>
+            <option value="3">D10</option>
+            <option value="4">D13</option>
+            <option value="5">D19</option>
+            <option value="6">D22</option>
+            <option value="7">D25</option>
           </select>
           <div class="form-text">Tulangan Utama sama dengan Tulangan Pokok atau Tulangan Memanjang</div>
         </div>
           <div class="col-md-6 mb-3" ><select class="form-select" aria-label="Default select example" style="height: 50px;"
             style="height: 50px;" id="tulanganSengkang">
             <option selected>Tulangan Sengkang</option>
-            <option value="1">One</option>
-            <option value="2">Two</option>
-            <option value="3">Three</option>
+            <option value="1">D6</option>
+            <option value="2">D8</option>
+            <option value="3">D10</option>
+            <option value="4">D13</option>
           </select><div class="form-text">
             disebut juga dengan Tulangan begel atau Tulangan Geser </div></div>
         <div class="col-md-6">
@@ -102,22 +107,25 @@
           <div class="col-md-6">
             <div class="input-group mb-3">
               <div class="form-floating">
-                <input type="number" class="form-control" id="JarakSengkang" placeholder="Jarak Sengkang" style="height: 50px; width: 85%;border-right: 0px;">
+                <input type="number" class="form-control" id="jarakSengkang" placeholder="Jarak Sengkang" style="height: 50px; width: 85%;border-right: 0px;">
                 <label for="floatingInputGroup1" style="line-height: 12px;">Jarak Sengkang</label>
               </div>
               <select class="form-select input-group-text" style="position: absolute; width: 15%; right: 0; height: 50px; text-align: start; " aria-label="Default select example" id="satuanJarakSengkang">
-                <option value="1" selected>mm</option>
-                <option value="2">cm</option>
-                <option value="3">m</option>
+                <option value="0.001" selected>mm</option>
+              <option value="0.01">cm</option>
+              <option value="1">m</option>
               </select>
             </div>
             </div>
             <div class="col-md-6 mb-5" ><select class="form-select" aria-label="Default select example" style="height: 50px;"
               style="height: 50px;" id="campuranMaterial">
               <option selected>Pilih Campuran</option>
-              <option value="1">One</option>
-              <option value="2">Two</option>
-              <option value="3">Three</option>
+              <option value="1">K150</option>
+              <option value="2">K175</option>
+              <option value="3">K200</option>
+              <option value="4">K225</option>
+              <option value="5">K250</option>
+              <option value="6">K275</option>
             </select>
             <div class="form-text">Untuk Pekerjaan Beton Optimal. rasio perbandingan antara, semen, pasir tertera diatas. Rasio ini memungkinkan beton mengera sempurna dengan integritas yang Tinggi</div>
           </div>
@@ -133,9 +141,9 @@
               </div>
               <div class="card-body">
                   <ul class="list-group list-group-flush ">
-                    <li class="list-group-item">Volume Besi 106 kg</li>
-                    <li class="list-group-item">Volume Bekesting 16 m<sup>2</sup></li>
-                    <li class="list-group-item">Volume Pengecoran 20 m<sup>3</sup> </li>
+                    <li class="list-group-item">Volume Besi</li>
+                    <li class="list-group-item">Volume Bekesting  </li>
+                    <li class="list-group-item">Volume Pengecoran </li>
                   </ul>
               </div>
             </div>
