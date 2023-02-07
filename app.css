@@ -1,3 +1,129 @@
 body {
   height: 1000px;
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+  --color-primary: #f2c94c;
+  --color-secondary: #f9f9fb;
+  --color-black: #0e0e0e;
+}
+
+#header .content {
+  width: 30em;
+  height: 100%;
+}
+
+#header .content h1 {
+  font-weight: bold;
+  line-height: 1.4;
+  margin-bottom: 0.5em;
+}
+
+#header .content h5 {
+  font-size: 1.1rem;
+  margin: 0;
+  margin-bottom: 0.5em;
+}
+
+#header .content p {
+  line-height: 1.4;
+}
+
+#header .content button {
+  background-color: var(--color-primary);
+  color: white;
+}
+
+#imgHeader {
+  width: 400px;
+  height: 350px;
+  background-color: var(--color-secondary);
+  position: relative;
+  border-radius: 12%;
+  transform-style: preserve-3d;
+}
+
+#logoHeader {
+  width: 500px;
+  position: absolute;
+  right: 50%;
+  bottom: 50%;
+  transform: translate(50%, 50%) translateZ(70px);
+}
+
+#iconHeader {
+  position: absolute;
+  width: 200px;
+  left: -20%;
+  top: 5%;
+  transform: translateZ(90px);
+}
+
+#volumeIcon {
+  width: 200px;
+  position: absolute;
+  bottom: 5%;
+  left: 65%;
+  transform: translateZ(100px);
+}
+
+.progress {
+  width: 150px;
+  height: 40px;
+  padding: 2%;
+  border-radius: 25px;
+  position: absolute;
+  left: 80%;
+  top: 4%;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 1px 1px 5px var(--color-secondary);
+  transform: translateZ(50px);
+}
+
+.progress h5 {
+  font-size: 10px;
+  margin: 0;
+  margin-left: 10px;
+  margin-bottom: 5px;
+}
+
+.progress .range {
+  width: 90px;
+  height: 1px;
+  border-radius: 1px;
+  border: 1.5px solid var(--color-secondary);
+  margin-left: 10px;
+  position: relative;
+}
+
+.progress .range::before {
+  content: "";
+  height: 1.5px;
+  position: absolute;
+  width: 70px;
+  border-radius: 1px;
+  background-color: var(--color-primary);
+  top: 50%;
+  left: -2px;
+  transform: translate(0, -50%);
+}
+
+.progress .range #persen {
+  position: absolute;
+  font-size: 7px;
+  bottom: 50%;
+  right: -23%;
+  transform: translate(0, 45%);
+}
+
+/* Menu Material Rumah */
+#menuHitungMaterial {
+  margin-top: 10em;
+}
+
+#menuHitungMaterial h2 {
+  font-weight: bold;
 }
