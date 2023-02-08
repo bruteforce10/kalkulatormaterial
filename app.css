@@ -9,6 +9,18 @@ body {
   --color-black: #0e0e0e;
 }
 
+/* Nav */
+.container .navbar-brand img {
+  width: 100px;
+}
+
+.tombol-kalkulator {
+  position: absolute;
+  right: 0;
+}
+
+/* Header */
+
 #header .content {
   width: 30em;
   height: 100%;
@@ -126,4 +138,92 @@ body {
 
 #menuHitungMaterial h2 {
   font-weight: bold;
+}
+
+/* list-pekerjaan */
+.list-pekerjaan {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 100%;
+}
+
+.list-pekerjaan .text-pekerjaan h4 {
+  margin: 0;
+  font-weight: bold;
+  margin-bottom: 0.25em;
+}
+
+.list-pekerjaan .text-pekerjaan span {
+  font-size: 1rem;
+}
+
+.list-pekerjaan .text-pekerjaan i {
+  position: absolute;
+  right: 1em;
+  bottom: 1.4em;
+}
+
+.list-pekerjaan .text-pekerjaan {
+  width: 100%;
+  height: 100%;
+  margin-top: 1.6em;
+}
+
+.list-pekerjaan .card-pekerjaan {
+  width: 19em;
+  height: 11em;
+  background-color: var(--color-primary);
+  border-radius: 1em;
+  padding: 1em 2%;
+  margin-right: 2em;
+  margin-bottom: 2em;
+  position: relative;
+  flex: 1 1 19em;
+}
+
+.list-pekerjaan .cover-pekerjaan {
+  width: 3.7em;
+  height: 3.7em;
+  background-color: var(--color-secondary);
+  border-radius: 50%;
+}
+
+@media (max-width: 450px) {
+  .tombol-kalkulator {
+    position: static;
+    margin-top: 1em;
+  }
+
+  .container .navbar-brand img {
+    width: 100px;
+  }
+
+  #header .content {
+    width: 20em;
+    height: 100%;
+    text-align: center;
+    margin: auto;
+  }
+
+  #gambarHeader {
+    transform: scale(0.6) translateX(25%);
+    transform-origin: 0%;
+  }
+
+  .list-pekerjaan .card-pekerjaan {
+    margin-right: 0;
+  }
+
+  #menuHitungMaterial {
+    margin-top: 5em;
+  }
+
+  .col-12 h2 {
+    text-align: center;
+  }
+
+  .col-12 p {
+    text-align: center;
+    margin-bottom: 2em;
+  }
 }
