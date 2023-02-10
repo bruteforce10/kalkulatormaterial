@@ -1,5 +1,5 @@
 body {
-  height: 1000px;
+  height: 100000px;
   font-family: "Poppins", sans-serif;
 }
 
@@ -7,6 +7,7 @@ body {
   --color-primary: #f2c94c;
   --color-secondary: #f9f9fb;
   --color-black: #0e0e0e;
+  --color-blue: #06234e;
 }
 
 /* Nav */
@@ -186,6 +187,11 @@ body {
   height: 3.7em;
   background-color: var(--color-secondary);
   border-radius: 50%;
+}
+
+#tombolPekerjaanLainnya {
+  background-color: var(--color-blue);
+  color: white;
 }
 
 @media (max-width: 450px) {
