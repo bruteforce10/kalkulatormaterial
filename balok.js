@@ -1,3 +1,19 @@
+// Nav Sipilku
+window.onscroll = function () {
+  const navbar = document.querySelector("#navbar");
+  if (this.scrollY === 0) {
+    navbar.style.backgroundColor = "transparent";
+  } else {
+    navbar.style.backgroundColor = "rgba(255, 255, 255, 0.8)";
+  }
+};
+
+
+
+
+
+
+
 const panjangBalok = document.querySelector("#panjangBalok");
 const satuanPanjang = document.querySelector("#satuanPanjang");
 const lebarBalok = document.querySelector("#lebarBalok");
