@@ -1,0 +1,129 @@
+body {
+  height: 100000px;
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+  --color-primary: #f2c94c;
+  --color-secondary: #f9f9fb;
+  --color-black: #0e0e0e;
+  --color-blue: #06234e;
+  --color-bluesoft: #98bbde;
+}
+
+/* Nav */
+.container .navbar-brand img {
+  width: 100px;
+}
+
+.tombol-kalkulator {
+  position: absolute;
+  right: 0;
+}
+
+/* Form */
+.size-label {
+  width: 17% !important;
+}
+
+label {
+  font-weight: 500;
+}
+
+.form-input {
+  background-color: var(--color-blue);
+  width: 100%;
+  height: 14rem;
+  margin-bottom: 3rem;
+}
+
+.form-text {
+  color: white;
+}
+
+/* Button */
+#hitungMaterial {
+  background-color: #093c89;
+  white-space: nowrap;
+  width: 100%;
+}
+
+.card-inner-body {
+  display: flex;
+  align-items: center;
+  margin: auto;
+}
+
+#buttonExportExcel {
+  background-color: var(--color-blue);
+}
+
+.img-volume {
+  padding: 1rem;
+  flex: 1 1 0.1rem;
+}
+
+.card-body {
+  flex: 1 1 15rem;
+}
+
+.img-volume img {
+  width: 100%;
+}
+
+#resetInput {
+  background-color: #971414;
+}
+
+.card-header {
+  background-color: var(--color-primary);
+}
+
+.card {
+  border: 1.5px solid var(--color-primary);
+}
+
+/* Media Queries */
+
+/* Laptop */
+@media (max-width: 1366px) {
+  html {
+    font-size: 95%;
+  }
+  .size-label {
+    width: 20% !important;
+  }
+  #hitungMaterial {
+    padding-right: 14rem;
+  }
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  html {
+    font-size: 95%;
+  }
+  .form-input {
+    height: 28rem;
+  }
+  .card-inner-body {
+    flex-direction: column;
+  }
+
+  .card-body {
+    flex: 1 1 12rem;
+  }
+  #hitungMaterial {
+    padding-right: 0;
+  }
+}
+
+/* Hobile */
+@media (max-width: 450px) {
+  .form-floating input {
+    width: 75% !important;
+  }
+  .size-label {
+    width: 25% !important;
+  }
+}

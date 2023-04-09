@@ -1,271 +1,327 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Boots</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="app.css" />
+    <!-- Font Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,700;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Icon -->
+    <script src="https://unpkg.com/feather-icons"></script>
+  </head>
 
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Boots</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
-    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="app.css" />
-  <!-- Font Google -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,700;1,700&display=swap"
-    rel="stylesheet">
-  <!-- Icon -->
-</head>
-
-<body>
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg pt-3 sticky-top" id="navbar">
-    <div class="container position-relative">
-      <a class="navbar-brand" href="#"><img src="img/logo.png" alt="Sipil Estimator"></a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
-        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse text-center" id="navbarNavAltMarkup">
-        <div class="navbar-nav">
-          <a class="nav-link" href="#">Features</a>
-          <a class="nav-link " href="#">suggestion</a>
-          <a class="nav-link" href="#">Get App</a>
-        </div>
-        <div class="tombol-kalkulator">
-          <button class="btn rounded-pill" style="background-color: var(--color-primary);"><i class="fa fa-calculator"
-              style="margin-right:5px ;"></i>Kalkulator Material</button>
-        </div>
-      </div>
-    </div>
-  </nav>
-
-  <div class="row" id="promoDatabase">
-    <div class="col-12">
-      <div class="alert alert-warning text-center fs-5 rounded-0 border-end-0 border-start-0" role="alert">
-        <i class="fa-solid fa-percent" style="margin-right: 10px;"></i>Ribuan Database File Teknik Sipil & Arsitektur
-        Siap Download &nbsp;<a href="https://sipilku.shop/" class="alert-link" target="_blank">KLIK DISINI!</a>
-      </div>
-    </div>
-  </div>
-
-
-
-  <section id="header" style="margin-top: 5em;">
-    <div class="container">
-      <div class="row gap-5 align-items-center">
-        <div class="col-sm-6 col-12">
-          <div class="content">
-            <h5><span style="color: var(--color-primary);">#</span>KalkulatorBahanMaterial</h5>
-            <h1>Menghitung Jadi Mudah Dengan Sipilku Estimate</h1>
-            <p>dibuat untuk mempermudah dalam menghitung kebutuhan material dalam membangun atau renovasi sebuah rumah
-            </p>
-            <button class="btn btn-lg rounded-pill">Coba Sekarang</button>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg pt-3 sticky-top" id="navbar">
+      <div class="container position-relative">
+        <a class="navbar-brand" href="#"
+          ><img src="img/logo.png" alt="Sipil Estimator"
+        /></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse text-center"
+          id="navbarNavAltMarkup"
+        >
+          <div class="navbar-nav">
+            <a class="nav-link" href="#">Features</a>
+            <a class="nav-link" href="#">suggestion</a>
+            <a class="nav-link" href="#">Get App</a>
           </div>
-        </div>
-        <div class="col-sm-5 col-12" id="gambarHeader">
-          <div id="imgHeader" data-tilt data-tilt-scale="1.1" class="mx-auto d-block">
-            <img src="img/header.png" alt="KalkulatorBahanMaterial" id="logoHeader">
-            <img src="img/quickcount.png" alt="Kalkulatortekniksipil" id="iconHeader">
-            <img src="img/volumeicon.png" alt="VolumeBahanMaterial" id="volumeIcon">
-            <div class="progress">
-              <h5>Progresss</h5>
-              <div class="range"><span id="persen">65%</span></div>
-            </div>
+          <div class="tombol-kalkulator">
+            <button
+              class="btn rounded-pill"
+              style="background-color: var(--color-primary)"
+            >
+              <i class="fa fa-calculator" style="margin-right: 5px"></i
+              >Kalkulator Material
+            </button>
           </div>
         </div>
       </div>
+    </nav>
+
+    <div class="row" id="promoDatabase">
+      <div class="col-12">
+        <div
+          class="alert alert-warning text-center fs-5 rounded-0 border-end-0 border-start-0"
+          role="alert"
+        >
+          <i class="fa-solid fa-percent" style="margin-right: 10px"></i>Ribuan
+          Database File Teknik Sipil & Arsitektur Siap Download &nbsp;<a
+            href="https://sipilku.shop/"
+            class="alert-link"
+            target="_blank"
+            >KLIK DISINI!</a
+          >
+        </div>
+      </div>
     </div>
-  </section>
 
-  <section id="menuHitungMaterial">
-    <div class="container">
-      <div class="row">
-        <div class="col-12">
-          <h2>Hitung Material Rumah</h2>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, exercitationem.</p>
-          <div class="list-pekerjaan">
-            <div class="card-pekerjaan">
-              <div class="cover-pekerjaan">
-              </div>
-              <div class="text-pekerjaan">
-                <h4>Urugan Tanah</h4>
-                <span>Lorem ipsum dolor sit amet.</span>
-                <i class="fa fa-chevron-right"></i>
-              </div>
+    <section id="header" style="margin-top: 5em">
+      <div class="container">
+        <div class="row gap-5 align-items-center">
+          <div class="col-sm-6 col-12">
+            <div class="content">
+              <h5>
+                <span style="color: var(--color-primary)">#</span
+                >KalkulatorBahanMaterial
+              </h5>
+              <h1>Menghitung Jadi Mudah Dengan Sipilku Estimate</h1>
+
+              <button class="btn btn-lg rounded-pill">Coba Sekarang</button>
             </div>
-
-            <div class="card-pekerjaan">
-              <div class="cover-pekerjaan">
-              </div>
-              <div class="text-pekerjaan">
-                <h4>Balok Struktur</h4>
-                <span>Lorem ipsum dolor sit amet.</span>
-                <i class="fa fa-chevron-right"></i>
-              </div>
-            </div>
-
-            <div class="card-pekerjaan">
-              <div class="cover-pekerjaan">
-              </div>
-              <div class="text-pekerjaan">
-                <h4>Kolom Struktur</h4>
-                <span>Lorem ipsum dolor sit amet.</span>
-                <i class="fa fa-chevron-right"></i>
-              </div>
-            </div>
-
-            <div class="card-pekerjaan">
-              <div class="cover-pekerjaan">
-              </div>
-              <div class="text-pekerjaan">
-                <h4>Plat Lantai</h4>
-                <span>Lorem ipsum dolor sit amet.</span>
-                <i class="fa fa-chevron-right"></i>
-              </div>
-            </div>
-
-            <div class="card-pekerjaan">
-              <div class="cover-pekerjaan">
-              </div>
-              <div class="text-pekerjaan">
-                <h4>Foot Plat</h4>
-                <span>Lorem ipsum dolor sit amet.</span>
-                <i class="fa fa-chevron-right"></i>
-              </div>
-            </div>
-
-            <div class="card-pekerjaan">
-              <div class="cover-pekerjaan">
-              </div>
-              <div class="text-pekerjaan">
-                <h4>Sloof Struktur</h4>
-                <span>Lorem ipsum dolor sit amet.</span>
-                <i class="fa fa-chevron-right"></i>
-              </div>
-            </div>
-
-            <div class="card-pekerjaan collapse" id="collapseExample">
-              <div class="cover-pekerjaan">
-              </div>
-              <div class="text-pekerjaan">
-                <h4>Beton Praktis</h4>
-                <span>Lorem ipsum dolor sit amet.</span>
-                <i class="fa fa-chevron-right"></i>
-              </div>
-            </div>
-
-            <div class="card-pekerjaan collapse" id="collapseExample">
-              <div class="cover-pekerjaan">
-              </div>
-              <div class="text-pekerjaan">
-                <h4>Dinding</h4>
-                <span>Lorem ipsum dolor sit amet.</span>
-                <i class="fa fa-chevron-right"></i>
-              </div>
-            </div>
-
-            <div class="card-pekerjaan collapse" id="collapseExample">
-              <div class="cover-pekerjaan">
-              </div>
-              <div class="text-pekerjaan">
-                <h4>Pondasi Batu Kali</h4>
-                <span>Lorem ipsum dolor sit amet.</span>
-                <i class="fa fa-chevron-right"></i>
-              </div>
-            </div>
-
-            <div class="card-pekerjaan collapse" id="collapseExample">
-              <div class="cover-pekerjaan">
-              </div>
-              <div class="text-pekerjaan">
-                <h4>Plesteran</h4>
-                <span>Lorem ipsum dolor sit amet.</span>
-                <i class="fa fa-chevron-right"></i>
-              </div>
-            </div>
-
-            <div class="card-pekerjaan collapse" id="collapseExample">
-              <div class="cover-pekerjaan">
-              </div>
-              <div class="text-pekerjaan">
-                <h4>Acian</h4>
-                <span>Lorem ipsum dolor sit amet.</span>
-                <i class="fa fa-chevron-right"></i>
-              </div>
-            </div>
-
-            <div class="card-pekerjaan collapse" id="collapseExample">
-              <div class="cover-pekerjaan">
-              </div>
-              <div class="text-pekerjaan">
-                <h4>Lantai</h4>
-                <span>Lorem ipsum dolor sit amet.</span>
-                <i class="fa fa-chevron-right"></i>
-              </div>
-            </div>
-
-            <div class="card-pekerjaan collapse" id="collapseExample">
-              <div class="cover-pekerjaan">
-              </div>
-              <div class="text-pekerjaan">
-                <h4>Cat</h4>
-                <span>Lorem ipsum dolor sit amet.</span>
-                <i class="fa fa-chevron-right"></i>
-              </div>
-            </div>
-
-            <div class="card-pekerjaan collapse" id="collapseExample">
-              <div class="cover-pekerjaan">
-              </div>
-              <div class="text-pekerjaan">
-                <h4>Plafond</h4>
-                <span>Lorem ipsum dolor sit amet.</span>
-                <i class="fa fa-chevron-right"></i>
-              </div>
-            </div>
-
-            <div class="card-pekerjaan collapse" id="collapseExample">
-              <div class="cover-pekerjaan">
-              </div>
-              <div class="text-pekerjaan">
-                <h4>Atap</h4>
-                <span>Lorem ipsum dolor sit amet.</span>
-                <i class="fa fa-chevron-right"></i>
+          </div>
+          <div class="col-sm-5 col-12" id="gambarHeader">
+            <div
+              id="imgHeader"
+              data-tilt
+              data-tilt-scale="1.1"
+              class="mx-auto d-block"
+            >
+              <img
+                src="img/header.png"
+                alt="KalkulatorBahanMaterial"
+                id="logoHeader"
+              />
+              <img
+                src="img/quickcount.png"
+                alt="Kalkulatortekniksipil"
+                id="iconHeader"
+              />
+              <img
+                src="img/volumeicon.png"
+                alt="VolumeBahanMaterial"
+                id="volumeIcon"
+              />
+              <div class="progress">
+                <h5>Progresss</h5>
+                <div class="range"><span id="persen">65%</span></div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="row">
-        <div class="col-12 text-center z-3 ">
-          <button class="btn rounded-pill btn-lg" id="tombolPekerjaanLainnya" type="button" data-bs-toggle="collapse"
-            data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-            Pekerjaan Lainnya <i class="fa-solid fa-arrow-down" style="margin-left: .5em;"></i>
-          </button>
+    </section>
+
+    <section id="menuHitungMaterial">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <h2>Hitung Material Rumah</h2>
+            <div class="group mb-3">
+              <i class="icon" data-feather="search"></i>
+              <input placeholder="Search" type="search" class="input" />
+            </div>
+            <div class="list-pekerjaan mb-3" id="listPekerjaan">
+              <a href="./page/urugan-tanah/index.html" class="card-pekerjaan">
+                <div class="cover-pekerjaan"></div>
+                <div class="text-pekerjaan">
+                  <h4>Urugan Tanah</h4>
+                  <span>Lorem ipsum dolor sit amet.</span>
+                  <i class="fa fa-chevron-right"></i>
+                </div>
+              </a>
+
+              <a href="./page/balok-struktur/index.html" class="card-pekerjaan">
+                <div class="cover-pekerjaan"></div>
+                <div class="text-pekerjaan">
+                  <h4>Balok Struktur</h4>
+                  <span>Lorem ipsum dolor sit amet.</span>
+                  <i class="fa fa-chevron-right"></i>
+                </div>
+              </a>
+
+              <div class="card-pekerjaan">
+                <div class="cover-pekerjaan"></div>
+                <div class="text-pekerjaan">
+                  <h4>Kolom Struktur</h4>
+                  <span>Lorem ipsum dolor sit amet.</span>
+                  <i class="fa fa-chevron-right"></i>
+                </div>
+              </div>
+
+              <div class="card-pekerjaan">
+                <div class="cover-pekerjaan"></div>
+                <div class="text-pekerjaan">
+                  <h4>Plat Lantai</h4>
+                  <span>Lorem ipsum dolor sit amet.</span>
+                  <i class="fa fa-chevron-right"></i>
+                </div>
+              </div>
+
+              <div class="card-pekerjaan">
+                <div class="cover-pekerjaan"></div>
+                <div class="text-pekerjaan">
+                  <h4>Foot Plat</h4>
+                  <span>Lorem ipsum dolor sit amet.</span>
+                  <i class="fa fa-chevron-right"></i>
+                </div>
+              </div>
+
+              <div class="card-pekerjaan">
+                <div class="cover-pekerjaan"></div>
+                <div class="text-pekerjaan">
+                  <h4>Sloof Struktur</h4>
+                  <span>Lorem ipsum dolor sit amet.</span>
+                  <i class="fa fa-chevron-right"></i>
+                </div>
+              </div>
+
+              <div class="card-pekerjaan collapse" id="collapseExample">
+                <div class="cover-pekerjaan"></div>
+                <div class="text-pekerjaan">
+                  <h4>Beton Praktis</h4>
+                  <span>Lorem ipsum dolor sit amet.</span>
+                  <i class="fa fa-chevron-right"></i>
+                </div>
+              </div>
+
+              <div class="card-pekerjaan collapse" id="collapseExample">
+                <div class="cover-pekerjaan"></div>
+                <div class="text-pekerjaan">
+                  <h4>Dinding</h4>
+                  <span>Lorem ipsum dolor sit amet.</span>
+                  <i class="fa fa-chevron-right"></i>
+                </div>
+              </div>
+
+              <a
+                href="./page/pondasi-batu-kali/index.html"
+                class="card-pekerjaan collapse"
+                id="collapseExample"
+              >
+                <div class="cover-pekerjaan"></div>
+                <div class="text-pekerjaan">
+                  <h4>Pondasi Batu Kali</h4>
+                  <span>Lorem ipsum dolor sit amet.</span>
+                  <i class="fa fa-chevron-right"></i>
+                </div>
+              </a>
+
+              <div class="card-pekerjaan collapse" id="collapseExample">
+                <div class="cover-pekerjaan"></div>
+                <div class="text-pekerjaan">
+                  <h4>Plesteran</h4>
+                  <span>Lorem ipsum dolor sit amet.</span>
+                  <i class="fa fa-chevron-right"></i>
+                </div>
+              </div>
+
+              <div class="card-pekerjaan collapse" id="collapseExample">
+                <div class="cover-pekerjaan"></div>
+                <div class="text-pekerjaan">
+                  <h4>Acian</h4>
+                  <span>Lorem ipsum dolor sit amet.</span>
+                  <i class="fa fa-chevron-right"></i>
+                </div>
+              </div>
+
+              <div class="card-pekerjaan collapse" id="collapseExample">
+                <div class="cover-pekerjaan"></div>
+                <div class="text-pekerjaan">
+                  <h4>Lantai</h4>
+                  <span>Lorem ipsum dolor sit amet.</span>
+                  <i class="fa fa-chevron-right"></i>
+                </div>
+              </div>
+
+              <div class="card-pekerjaan collapse" id="collapseExample">
+                <div class="cover-pekerjaan"></div>
+                <div class="text-pekerjaan">
+                  <h4>Cat</h4>
+                  <span>Lorem ipsum dolor sit amet.</span>
+                  <i class="fa fa-chevron-right"></i>
+                </div>
+              </div>
+
+              <div class="card-pekerjaan collapse" id="collapseExample">
+                <div class="cover-pekerjaan"></div>
+                <div class="text-pekerjaan">
+                  <h4>Plafond</h4>
+                  <span>Lorem ipsum dolor sit amet.</span>
+                  <i class="fa fa-chevron-right"></i>
+                </div>
+              </div>
+
+              <div class="card-pekerjaan collapse" id="collapseExample">
+                <div class="cover-pekerjaan"></div>
+                <div class="text-pekerjaan">
+                  <h4>Atap</h4>
+                  <span>Lorem ipsum dolor sit amet.</span>
+                  <i class="fa fa-chevron-right"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 text-center z-3">
+            <button
+              class="btn rounded-pill btn-lg"
+              id="tombolPekerjaanLainnya"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseExample"
+              aria-expanded="false"
+              aria-controls="collapseExample"
+            >
+              Pekerjaan Lainnya
+              <i class="fa-solid fa-arrow-down" style="margin-left: 0.5em"></i>
+            </button>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-
-
-
-  <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM="
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous">
-  </script>
-  <script src="app.js"></script>
-  <script type="text/javascript" src="vanilla-tilt.min.js"></script>
-  <script type="text/javascript">
-    VanillaTilt.init(document.querySelector("#imgHeader"), {
-      max: 25,
-      speed: 400,
-    });
-  </script>
-</body>
-
+    <script>
+      feather.replace();
+    </script>
+    <script
+      src="https://code.jquery.com/jquery-3.6.3.js"
+      integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+    <script src="app.js"></script>
+    <script type="text/javascript" src="vanilla-tilt.min.js"></script>
+    <script type="text/javascript">
+      VanillaTilt.init(document.querySelector("#imgHeader"), {
+        max: 25,
+        speed: 400,
+      });
+    </script>
+  </body>
 </html>

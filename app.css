@@ -39,10 +39,6 @@ body {
   margin-bottom: 0.5em;
 }
 
-#header .content p {
-  line-height: 1.4;
-}
-
 #header .content button {
   background-color: var(--color-primary);
   color: white;
@@ -141,11 +137,56 @@ body {
   font-weight: bold;
 }
 
+#notFound {
+  display: none;
+}
+
+/* Search Menu Material Rumah */
+.group {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 100%;
+}
+
+.input {
+  width: 100%;
+  height: 40px;
+  padding: 0 1rem;
+  padding-left: 2.5rem;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  outline: none;
+  background-color: #f3f3f4;
+  color: #0d0c22;
+  transition: 0.3s ease;
+}
+
+.input::placeholder {
+  color: #9e9ea7;
+}
+
+.input:focus,
+input:hover {
+  outline: none;
+  border-color: var(--color-primary);
+  background-color: #fff;
+  box-shadow: 0 0 0 4px rgb(234 76 137 / 10%);
+}
+
+.icon {
+  position: absolute;
+  left: 1rem;
+  width: 1rem;
+  height: 1rem;
+}
+
 /* list-pekerjaan */
 .list-pekerjaan {
   display: flex;
   flex-wrap: wrap;
-  max-width: 100%;
+  justify-content: center;
+  gap: 2rem;
 }
 
 .list-pekerjaan .text-pekerjaan h4 {
@@ -171,15 +212,20 @@ body {
 }
 
 .list-pekerjaan .card-pekerjaan {
-  width: 19em;
+  width: 25em;
   height: 11em;
   background-color: var(--color-primary);
   border-radius: 1em;
   padding: 1em 2%;
-  margin-right: 2em;
-  margin-bottom: 2em;
   position: relative;
   flex: 1 1 19em;
+  cursor: pointer;
+  text-decoration: none;
+  color: black;
+}
+
+.list-pekerjaan .card-pekerjaan:hover {
+  background-color: #e9be3b;
 }
 
 .list-pekerjaan .cover-pekerjaan {
