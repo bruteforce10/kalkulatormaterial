@@ -10,6 +10,151 @@ body {
   --color-blue: #06234e;
 }
 
+/* about */
+#about {
+  margin-top: 3.7rem;
+}
+
+#about .container {
+  border-radius: 2rem;
+  height: fit-content;
+  background: url(./img/bg-why.png);
+}
+
+#about .row h3 {
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+#about .row p {
+  line-height: 180%;
+  font-weight: light;
+}
+
+#about .col-12.feature {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+#about .col-12.feature img {
+  width: 29rem;
+  height: 100%;
+  padding: 3rem;
+  flex: 1;
+}
+
+#about .content-feature {
+  padding: 3rem;
+  flex: 0.8;
+}
+
+#about .wrapper-feature {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 2rem 3rem 3rem 3rem;
+  gap: 2rem;
+}
+
+#about .wrapper-feature .feature {
+  background-color: #fff;
+  width: 3rem;
+  border-radius: 2rem;
+  height: 12rem;
+  flex: 1 1 12rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.1rem;
+  transition: 0.5s ease-in-out;
+}
+
+#about .wrapper-feature .feature:hover {
+  box-shadow: -25px -14px 400px 98px rgba(216, 216, 216, 0.29);
+  -webkit-box-shadow: -25px -14px 400px 98px rgba(216, 216, 216, 0.29);
+  -moz-box-shadow: -25px -14px 400px 98px rgba(216, 216, 216, 0.29);
+}
+
+#about .wrapper-feature .feature h5 {
+  width: 80%;
+  font-size: 1.1rem;
+  line-height: 150%;
+}
+
+.img-feature {
+  position: relative;
+}
+
+.followers-sipilku {
+  font-family: PlusJakartaSans, -apple-system, BlinkMacSystemFont, Segoe UI,
+    Roboto, Oxygen, Cantarell, Helvetica Neue, Ubuntu, sans-serif;
+  font-size: 1rem;
+  align-items: center;
+  height: 48px;
+  border-radius: 1rem;
+  font-weight: 600;
+  padding: 0 1.2rem;
+  color: var(--color-black);
+  border: 0.5px solid var(--color-black);
+  box-shadow: 0 0.5rem 1rem rgba(143, 142, 142, 0.15) !important;
+  background: var(--color-primary);
+  position: absolute;
+  margin-bottom: 65px;
+  margin-right: 45px;
+  right: 0;
+  transform: scale(0.9);
+  bottom: 0;
+}
+
+.followers {
+  font-size: 0.8rem;
+  color: var(--color-black);
+}
+
+/* Side Bar */
+
+#sideBar ul {
+  height: 100%;
+  width: 400px;
+  position: fixed;
+  z-index: 99;
+  background-color: var(--color-secondary);
+  right: 0;
+  transform: translateX(1000px);
+  transition: all 0.3s;
+  opacity: 0;
+  overflow: scroll;
+}
+
+#sideBar ul li {
+  list-style: none;
+  padding: 25px;
+  display: block;
+  margin-left: 25px;
+}
+
+#sideBar ul li a {
+  text-decoration: none;
+  color: #0d0c22;
+  height: 40px;
+  display: flex;
+  align-items: center;
+}
+
+#sideBar ul li img {
+  margin-right: 0.9rem;
+}
+
+#sideBar ul.slide {
+  transform: translateX(0);
+  opacity: 1;
+}
+
 /* Nav */
 .container .navbar-brand img {
   width: 100px;
@@ -20,7 +165,43 @@ body {
   right: 0;
 }
 
+.btn.mobile-kalkulator {
+  display: none;
+}
+
 /* Header */
+
+#header button {
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.2s;
+  padding: 10px 20px;
+  border-radius: 100px;
+  background: var(--color-primary);
+  border: 1px solid transparent;
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+}
+
+#header button > svg {
+  width: 34px;
+  margin-left: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+#header button:hover svg {
+  transform: translateX(5px);
+}
+
+#header button:active {
+  transform: scale(0.95);
+}
+
+.info-header {
+  line-height: 180%;
+  margin-bottom: 2em;
+}
 
 #header .content {
   width: 30em;
@@ -130,7 +311,7 @@ body {
 
 /* Menu Material Rumah */
 #menuHitungMaterial {
-  margin-top: 10em;
+  margin-top: 6em;
 }
 
 #menuHitungMaterial h2 {
@@ -141,7 +322,16 @@ body {
   display: none;
 }
 
+.navbar-wrapper {
+  display: flex;
+  gap: 0.5rem;
+}
+
 /* Search Menu Material Rumah */
+.info-material {
+  width: 50%;
+  line-height: 150%;
+}
 .group {
   display: flex;
   align-items: center;
@@ -182,6 +372,7 @@ input:hover {
 }
 
 /* list-pekerjaan */
+
 .list-pekerjaan {
   display: flex;
   flex-wrap: wrap;
@@ -192,23 +383,16 @@ input:hover {
 .list-pekerjaan .text-pekerjaan h4 {
   margin: 0;
   font-weight: bold;
-  margin-bottom: 0.25em;
+  margin-bottom: 0.1em;
 }
 
 .list-pekerjaan .text-pekerjaan span {
-  font-size: 1rem;
-}
-
-.list-pekerjaan .text-pekerjaan i {
-  position: absolute;
-  right: 1em;
-  bottom: 1.4em;
-}
-
-.list-pekerjaan .text-pekerjaan {
-  width: 100%;
-  height: 100%;
-  margin-top: 1.6em;
+  font-size: 0.95rem;
+  width: 90%;
+  display: inline-block;
+  line-height: 150%;
+  opacity: 0.9;
+  text-transform: lowercase;
 }
 
 .list-pekerjaan .card-pekerjaan {
@@ -216,23 +400,38 @@ input:hover {
   height: 11em;
   background-color: var(--color-primary);
   border-radius: 1em;
-  padding: 1em 2%;
-  position: relative;
   flex: 1 1 19em;
   cursor: pointer;
   text-decoration: none;
   color: black;
+  display: flex;
+  padding-left: 26px;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.list-pekerjaan .card-pekerjaans {
+  height: 100%;
+  width: 100%;
+  background-color: var(--color-primary);
+  border-radius: 1em;
+  flex: 1 1 19em;
+  cursor: pointer;
+  text-decoration: none;
+  color: black;
+  display: flex;
+  padding-left: 26px;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+#collapseExample {
+  flex: 1 1 19em;
+  width: 25em;
+  height: 11em;
 }
 
 .list-pekerjaan .card-pekerjaan:hover {
   background-color: #e9be3b;
-}
-
-.list-pekerjaan .cover-pekerjaan {
-  width: 3.7em;
-  height: 3.7em;
-  background-color: var(--color-secondary);
-  border-radius: 50%;
 }
 
 #tombolPekerjaanLainnya {
@@ -241,6 +440,21 @@ input:hover {
 }
 
 @media (max-width: 450px) {
+  #header .content h1 {
+    font-size: 2rem;
+  }
+
+  #header .content h5 {
+    font-size: 0.9rem;
+  }
+
+  .info-header {
+    font-size: 80%;
+  }
+  .info-material {
+    width: 100%;
+    font-size: 80%;
+  }
   .tombol-kalkulator {
     position: static;
     margin-top: 1em;
@@ -262,6 +476,10 @@ input:hover {
     transform-origin: 0%;
   }
 
+  .list-pekerjaan {
+    gap: 1.2rem;
+  }
+
   .list-pekerjaan .card-pekerjaan {
     margin-right: 0;
   }
@@ -277,5 +495,50 @@ input:hover {
   .col-12 p {
     text-align: center;
     margin-bottom: 2em;
+  }
+
+  #sideBar ul {
+    width: 300px;
+  }
+
+  #sideBar ul li {
+    margin: 0;
+  }
+
+  #about {
+    margin-top: 1.3rem;
+  }
+
+  #about .row h3 {
+    text-align: center;
+  }
+
+  #about .row p {
+    font-size: 95%;
+  }
+  .tombol-kalkulator {
+    display: none;
+  }
+
+  .btn.mobile-kalkulator {
+    display: block;
+  }
+
+  #header button {
+    margin: auto;
+    margin-bottom: -50px;
+  }
+  #about .content-feature {
+    padding: 3rem 2rem 0 2rem;
+    flex: 1;
+  }
+  #about .row h3 {
+    font-weight: 600;
+    margin-bottom: 2rem;
+  }
+
+  .img-feature {
+    transform: scale(0.9);
+    margin-top: -2rem;
   }
 }

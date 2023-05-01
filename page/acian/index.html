@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Plesteran</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="acian.css" />
+    <!-- Export XLS Javascript -->
+    <script
+      type="text/javascript"
+      src="https://unpkg.com/xlsx@0.15.1/dist/xlsx.full.min.js"
+    ></script>
+    <!-- Icon -->
+    <script src="https://unpkg.com/feather-icons"></script>
+  </head>
+
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg pt-3 sticky-top" id="navbar">
+      <div class="container position-relative">
+        <a class="navbar-brand" href="/index.html"
+          ><img src="/img/logo.png" alt="Sipil Estimator"
+        /></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse text-center"
+          id="navbarNavAltMarkup"
+        >
+          <div class="navbar-nav">
+            <a class="nav-link" href="#">Features</a>
+            <a class="nav-link" href="#">suggestion</a>
+            <a class="nav-link" href="#">Get App</a>
+          </div>
+          <div class="tombol-kalkulator">
+            <button
+              class="btn rounded-pill"
+              style="background-color: var(--color-primary)"
+            >
+              <i class="fa fa-calculator" style="margin-right: 5px"></i
+              >Kalkulator Material
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container mt-5">
+      <div class="fs-1 mb-1 text-center fw-bold">Acian</div>
+      <div
+        class="mb-4 mx-auto"
+        style="width: 5rem; border: 2px solid black"
+      ></div>
+      <form id="formInput">
+        <div class="form-input rounded-4">
+          <div class="row p-4 justify-content-center">
+            <div class="col-md-6">
+              <div class="input-group mb-3">
+                <div class="form-floating">
+                  <input
+                    type="number"
+                    class="form-control"
+                    placeholder="Panjang"
+                    style="height: 50px; width: 83%; border-right: 0px"
+                  />
+                  <label for="floatingInputGroup1" style="line-height: 12px"
+                    >Panjang</label
+                  >
+                </div>
+                <select
+                  class="form-select input-group-text size-label"
+                  style="
+                    position: absolute;
+                    right: 0;
+                    height: 50px;
+                    text-align: start;
+                  "
+                  aria-label="Default select example"
+                >
+                  <option value="1" selected>m</option>
+                  <option value="0.01">cm</option>
+                  <option value="0.001">mm</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="input-group mb-3">
+                <div class="form-floating">
+                  <input
+                    type="number"
+                    class="form-control"
+                    placeholder="Lebar"
+                    style="height: 50px; width: 83%; border-right: 0px"
+                  />
+                  <label for="floatingInputGroup1" style="line-height: 12px"
+                    >Tinggi</label
+                  >
+                </div>
+                <select
+                  class="form-select input-group-text size-label"
+                  style="
+                    position: absolute;
+                    right: 0;
+                    height: 50px;
+                    text-align: start;
+                  "
+                  aria-label="Default select example"
+                >
+                  <option value="1" selected>m</option>
+                  <option value="0.01">cm</option>
+                  <option value="0.001">mm</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="input-group mb-3">
+                <div class="form-floating">
+                  <input
+                    type="number"
+                    class="form-control"
+                    placeholder="Jumlah Tulangan"
+                    style="height: 50px; width: 83%; border-right: 0px"
+                  />
+                  <label for="floatingInputGroup1" style="line-height: 12px"
+                    >Jumlah Sisi Acian</label
+                  >
+                </div>
+                <span
+                  class="input-group-text size-label"
+                  id="basic-addon2"
+                  style="
+                    position: absolute;
+                    right: 0;
+                    height: 50px;
+                    text-align: start;
+                  "
+                  >Buah</span
+                >
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="vol-pondasi w-100">
+                <p class="text-center pt-1 fw-medium">Luas Acian</p>
+                <p
+                  id="kebAcian"
+                  class="text-center"
+                  style="margin-top: -15px; font-weight: 600"
+                ></p>
+              </div>
+            </div>
+
+            <div class="col-md-6 mt-3">
+              <div class="row">
+                <div class="col-lg-6 col-12">
+                  <button
+                    class="btn btn-primary fs-5 text-center w-100"
+                    type="submit"
+                    id="hitungMaterial"
+                  >
+                    <i data-feather="percent"></i> Hitung Material
+                  </button>
+                </div>
+                <div class="col-lg-6 col-12">
+                  <button
+                    class="btn btn-danger fs-5 text-center w-100"
+                    type="button"
+                    id="resetInput"
+                  >
+                    <i
+                      data-feather="refresh-cw"
+                      style="margin-right: 0.2rem"
+                    ></i>
+                    Reset
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <input type="number" value="1" class="d-none" />
+
+        <!-- Hasil Tabel -->
+        <div class="col-md-12 d-none">
+          <table class="table" id="tbl_exporttable_to_xls">
+            <thead class="table-dark">
+              <tr>
+                <th colspan="2">Volume Pekerjaan Acian</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th>Volume Pekerjaan</th>
+                <td id="tableAcian"></td>
+              </tr>
+              <tr>
+                <th>Kebutuhan Semen & Mill</th>
+                <td id="tableAcian"></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="row justify-content-center">
+          <div class="col-md-12 mb-4">
+            <div class="card border-warning h-100">
+              <div class="card-body">
+                <img src="/img/semen.png" alt="semen beton" />
+                <h5 class="card-title fw-bold">Kebutuhan Semen & Mill</h5>
+                <p class="card-text fs-5 mt-3" id="kebAcian"></p>
+                <p class="card-text mt-5">
+                  <small class="text-muted"
+                    >Kebutuhan semen dalam satuan Zak berdasarkan rasio dan
+                    jenis pekerjaan(1 zak semen Mill sama dengan 1 buah
+                    20kg)</small
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12">
+          <button
+            class="btn btn-primary fs-4 text-center w-100 mb-4"
+            id="buttonExportExcel"
+          >
+            <i
+              data-feather="table"
+              style="margin-right: 0.2rem; margin-top: -0.1rem"
+            ></i>
+            Export to Excel
+          </button>
+        </div>
+      </form>
+    </div>
+    <script>
+      feather.replace();
+    </script>
+    <script
+      src="https://code.jquery.com/jquery-3.6.3.js"
+      integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+      integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"
+      integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+    <script src="acian.js" type="module"></script>
+    <script src="/JS/utilities/utilittiesOrigin.js" type="module"></script>
+  </body>
+</html>

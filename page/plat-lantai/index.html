@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bootstrap demo</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="plat-lantai.css" />
+    <!-- Export XLS Javascript -->
+    <script
+      type="text/javascript"
+      src="https://unpkg.com/xlsx@0.15.1/dist/xlsx.full.min.js"
+    ></script>
+    <!-- Icon -->
+    <script src="https://unpkg.com/feather-icons"></script>
+  </head>
+
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg pt-3 sticky-top" id="navbar">
+      <div class="container position-relative">
+        <a class="navbar-brand" href="../../index.html"
+          ><img src="../../img/logo.png" alt="Sipil Estimator"
+        /></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse text-center"
+          id="navbarNavAltMarkup"
+        >
+          <div class="navbar-nav">
+            <a class="nav-link" href="#">Features</a>
+            <a class="nav-link" href="#">suggestion</a>
+            <a class="nav-link" href="#">Get App</a>
+          </div>
+          <div class="tombol-kalkulator">
+            <button
+              class="btn rounded-pill"
+              style="background-color: var(--color-primary)"
+            >
+              <i class="fa fa-calculator" style="margin-right: 5px"></i
+              >Kalkulator Material
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container mt-5">
+      <div class="fs-1 mb-1 text-center fw-bold">Plat Lantai</div>
+      <div
+        class="mb-3 mx-auto"
+        style="width: 5rem; border: 2px solid black"
+      ></div>
+      <form id="formInput" style="margin-top: 40px">
+        <div class="form-input rounded-4 mt-4">
+          <div class="row gy-3 p-4">
+            <div class="col-md-6">
+              <div class="input-group">
+                <div class="form-floating">
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="panjangBalok"
+                    placeholder="Panjang Kolom"
+                    style="height: 50px; width: 83%; border-right: 0px"
+                  />
+                  <label for="floatingInputGroup1" style="line-height: 12px"
+                    >Panjang Plat Lantai</label
+                  >
+                </div>
+                <select
+                  class="form-select input-group-text size-label"
+                  style="
+                    position: absolute;
+                    right: 0;
+                    height: 50px;
+                    text-align: start;
+                  "
+                  aria-label="Default select example"
+                  id="satuanPanjang"
+                >
+                  <option value="1" selected>m</option>
+                  <option value="0.01">cm</option>
+                  <option value="0.001">mm</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="input-group">
+                <div class="form-floating">
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="lebarBalok"
+                    placeholder="Lebar Balok"
+                    style="height: 50px; width: 83%; border-right: 0px"
+                  />
+                  <label for="floatingInputGroup1" style="line-height: 12px"
+                    >Lebar Plat Lantai</label
+                  >
+                </div>
+                <select
+                  class="form-select input-group-text size-label"
+                  style="
+                    position: absolute;
+                    right: 0;
+                    height: 50px;
+                    text-align: start;
+                  "
+                  aria-label="Default select example"
+                  id="satuanLebar"
+                >
+                  <option value="1" selected>m</option>
+                  <option value="0.01">cm</option>
+                  <option value="0.001">mm</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="input-group">
+                <div class="form-floating">
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="tinggiBalok"
+                    placeholder="Tinggi Balok"
+                    style="height: 50px; width: 83%; border-right: 0px"
+                  />
+                  <label for="floatingInputGroup1" style="line-height: 12px"
+                    >Tebal Plat Lantai</label
+                  >
+                </div>
+                <select
+                  class="form-select input-group-text size-label"
+                  style="
+                    position: absolute;
+                    right: 0;
+                    height: 50px;
+                    text-align: start;
+                  "
+                  aria-label="Default select example"
+                  id="satuanTinggi"
+                >
+                  <option value="0.001" selected>mm</option>
+                  <option value="0.01">cm</option>
+                  <option value="1">m</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="input-group">
+                <div class="form-floating">
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="selimutBalok"
+                    placeholder="Selimut Balok"
+                    style="height: 50px; width: 83%; border-right: 0px"
+                  />
+                  <label for="selimutBalok" style="line-height: 12px"
+                    >Selimut Beton</label
+                  >
+                </div>
+                <select
+                  class="form-select input-group-text size-label"
+                  style="
+                    position: absolute;
+                    right: 0;
+                    height: 50px;
+                    text-align: start;
+                  "
+                  aria-label="Default select example"
+                  id="satuanSelimut"
+                >
+                  <option value="0.001" selected>mm</option>
+                  <option value="0.01">cm</option>
+                  <option value="1">m</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="row align-items-center">
+                <div class="col-11">
+                  <select
+                    class="form-select fw-medium"
+                    aria-label="Default select example"
+                    style="height: 50px"
+                    style="height: 50px"
+                    id="campuranMaterial"
+                  >
+                    <option value="">Tulangan Arah X</option>
+                    <option value="1">D6</option>
+                    <option value="2">D8</option>
+                    <option value="3">D10</option>
+                    <option value="4">D13</option>
+                  </select>
+                </div>
+                <div class="col-1 p-0 p-lg-2">
+                  <a
+                    data-bs-toggle="modal"
+                    data-bs-target="#exampleModal"
+                    id="tombolModal"
+                    ><i data-feather="info" style="color: white"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <select
+                class="form-select fw-medium"
+                aria-label="Default select example"
+                style="height: 50px"
+                style="height: 50px"
+                id="tulanganSengkang"
+              >
+                <option value="">Tulangan Arah Y</option>
+                <option value="1">D6</option>
+                <option value="2">D8</option>
+                <option value="3">D10</option>
+                <option value="4">D13</option>
+              </select>
+            </div>
+            <div class="col-md-6">
+              <div class="input-group">
+                <div class="form-floating">
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="jarakSengkang"
+                    placeholder="Jarak Sengkang"
+                    style="height: 50px; width: 83%; border-right: 0px"
+                  />
+                  <label for="floatingInputGroup1" style="line-height: 12px"
+                    >Jarak Sengkang Arah X</label
+                  >
+                </div>
+                <select
+                  class="form-select input-group-text size-label"
+                  style="
+                    position: absolute;
+                    right: 0;
+                    height: 50px;
+                    text-align: start;
+                  "
+                  aria-label="Default select example"
+                  id="satuanJarakSengkang"
+                >
+                  <option value="0.001" selected>mm</option>
+                  <option value="0.01">cm</option>
+                  <option value="1">m</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="input-group">
+                <div class="form-floating">
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="jarakSengkang"
+                    placeholder="Jarak Sengkang"
+                    style="height: 50px; width: 83%; border-right: 0px"
+                  />
+                  <label for="floatingInputGroup1" style="line-height: 12px"
+                    >Jarak Sengkang Arah Y</label
+                  >
+                </div>
+                <select
+                  class="form-select input-group-text size-label"
+                  style="
+                    position: absolute;
+                    right: 0;
+                    height: 50px;
+                    text-align: start;
+                  "
+                  aria-label="Default select example"
+                  id="satuanJarakSengkang"
+                >
+                  <option value="0.001" selected>mm</option>
+                  <option value="0.01">cm</option>
+                  <option value="1">m</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-md-6 mb-sm-5">
+              <select
+                class="form-select"
+                aria-label="Default select example"
+                style="height: 50px; font-weight: 500"
+                id="campuranMaterial"
+              >
+                <option value="">Pilih Campuran</option>
+                <option value="1">K150</option>
+                <option value="2">K175</option>
+                <option value="3">K200</option>
+                <option value="4">K225</option>
+                <option value="5">K250</option>
+                <option value="6">K275</option>
+              </select>
+              <div class="form-text mt-2">
+                Untuk Pekerjaan Beton Optimal. rasio perbandingan antara, semen,
+                pasir tertera diatas. Rasio ini memungkinkan beton mengera
+                sempurna dengan integritas yang Tinggi
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="row justify-content-center">
+                <div class="col-md-12 col-lg-6">
+                  <button
+                    class="btn btn-primary fs-4 text-center w-100 fw-medium"
+                    type="submit"
+                    id="hitungMaterial"
+                  >
+                    <i data-feather="percent"></i> Hitung Material
+                  </button>
+                </div>
+                <div class="col-md-12 col-lg-6">
+                  <button
+                    class="btn btn-danger fs-4 text-center w-100 fw-medium"
+                    type="button"
+                    id="resetInput"
+                  >
+                    <i
+                      data-feather="refresh-cw"
+                      style="margin-right: 0.2rem"
+                    ></i>
+                    Reset
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Modal -->
+        <div
+          class="modal fade"
+          id="exampleModal"
+          tabindex="-1"
+          aria-labelledby="exampleModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-body">
+                <img
+                  src="/img/pilihcampuran.png"
+                  alt="campuran material"
+                  class="img-fluid d-block mx-auto mb-5"
+                />
+                <h5>Tulangan Arah x</h5>
+                <p>
+                  adalah tulangan searah horizontal atau bentang pendek suatu
+                  plat
+                </p>
+                <img
+                  src="/img/pilihcampuran.png"
+                  alt="campuran material"
+                  class="img-fluid d-block mx-auto"
+                />
+                <h5>Tulangan Arah y</h5>
+                <p>
+                  adalah tulangan searah vertikal atau bentang panjang suatu
+                  plat
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hasil Tabel -->
+        <div class="col-md-12 d-none">
+          <table class="table" id="tbl_exporttable_to_xls">
+            <thead class="table-dark">
+              <tr>
+                <th colspan="2">Volume Pekerjaan Plat Lantai</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th>Volume Besi</th>
+                <td id="kolVolBesi"></td>
+              </tr>
+              <tr>
+                <th>Volume Bekesting</th>
+                <td id="kolVolBekesting"></td>
+              </tr>
+              <tr>
+                <th>Volume Pengecoran</th>
+                <td id="kolVolPengecoran"></td>
+              </tr>
+              <tr>
+                <th colspan="3" class="table-dark">Kebutuhan Material</th>
+              </tr>
+              <tr>
+                <th>Kebutuhan Semen</th>
+                <td id="kolSemenZak"></td>
+              </tr>
+
+              <tr>
+                <th>Kebutuhan Pasir</th>
+                <td id="kolPasir"></td>
+              </tr>
+              <tr>
+                <th>Kebutuhan Krikil</th>
+                <td id="kolKrikil"></td>
+              </tr>
+              <tr>
+                <th>Kebutuhan Besi Sengkang Arah X</th>
+                <td id="kolBesiUtamaBuah"></td>
+              </tr>
+              <tr>
+                <th>Kebutuhan Besi Sengkang Arah Y</th>
+                <td id="kolBesiSengkangBuah"></td>
+              </tr>
+              <tr>
+                <th>Kebutuhan Bekesting</th>
+                <td id="kolBekesting"></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6 mb-4">
+            <div class="card h-100">
+              <div class="card-header text-center fw-bold fs-5">
+                Volume Pekerjaan Plat Lantai
+              </div>
+              <div class="card-inner-body">
+                <div class="img-volume">
+                  <img
+                    src="../../img/pengecoran.png"
+                    alt="kalkulator bahan material"
+                  />
+                </div>
+                <div class="card-body">
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item" id="kebutuhanMaterial">
+                      Volume Besi
+                    </li>
+                    <li class="list-group-item" id="kebutuhanMaterial">
+                      Volume Bekesting
+                    </li>
+                    <li class="list-group-item" id="kebutuhanMaterial">
+                      Volume Pengecoran
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 mb-4">
+            <div class="card border-warning h-100">
+              <div class="card-body">
+                <img src="../../img/semen.png" alt="semen beton" />
+                <h5 class="card-title fw-bold">Kebutuhan Semen</h5>
+                <p class="card-text fs-5 mt-3" id="kebutuhanMaterial"></p>
+                <p class="card-text mt-5">
+                  <small class="text-muted"
+                    >Kebutuhan semen dalam Zak berdasarkan rasio dan jenis
+                    pekerjaan(1 zak sama dengan 1 buah 50kg semen)</small
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 mb-4">
+            <div class="card border-warning h-100">
+              <div class="card-body">
+                <img src="../../img/pasir.png" alt="pasir beton" />
+                <h5 class="card-title fw-bold">Kebutuhan Pasir</h5>
+                <p class="card-text fs-5 mt-3" id="kebutuhanMaterial"></p>
+                <p class="card-text mt-5">
+                  <small class="text-muted"
+                    >Kebutuhan Pasir dalam kg berdasarkan ratio dan jenis
+                    pekerjaan</small
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 mb-4">
+            <div class="card border-warning h-100">
+              <div class="card-body">
+                <img src="../../img/krikil.png" alt="Krikil beton" />
+                <h5 class="card-title fw-bold">Kebutuhan Krikil</h5>
+                <p class="card-text fs-5 mt-3" id="kebutuhanMaterial"></p>
+                <p class="card-text mt-5">
+                  <small class="text-muted"
+                    >Kebutuhan Krikil dalam kg berdasarkan ratio dan jenis
+                    pekerjaan</small
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 mb-4">
+            <div class="card border-warning h-100">
+              <div class="card-body">
+                <img
+                  src="../../img/besi.png"
+                  alt="besi beton"
+                  width="110"
+                  class="mb-3"
+                />
+                <h5 class="card-title fw-bold">Kebutuhan Besi</h5>
+                <p class="card-text fs-5 mt-3" id="kebutuhanMaterial"></p>
+                <div class="hr w-50"></div>
+                <p class="card-text fs-5" id="kebutuhanMaterial"></p>
+                <p class="card-text mt-5">
+                  <small class="text-muted"
+                    >Kebutuhan Besi dalam kg berdasarkan ratio dan jenis
+                    pekerjaan</small
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 mb-4">
+            <div class="card border-warning h-100">
+              <div class="card-body">
+                <img src="../../img/kayu.png" alt="kayu Struktur" />
+                <h5 class="card-title fw-bold">Kebutuhan Bekesting</h5>
+                <p
+                  class="card-text fs-5 mt-3"
+                  style="margin-bottom: 80px"
+                  id="kebutuhanMaterial"
+                ></p>
+                <p class="card-text">
+                  <small class="text-muted"
+                    >Kebutuhan Bekesting dalam buah/lembar berdasarkan rasio dan
+                    jenis pekerjaan (dengan triplek ukuran 1.22 m x 2.44
+                    m)</small
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12">
+            <button
+              class="btn btn-primary fs-4 text-center w-100 mb-4"
+              id="buttonExportExcel"
+            >
+              <i
+                data-feather="table"
+                style="margin-right: 0.2rem; margin-top: -0.1rem"
+              ></i>
+              Export to Excel
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+    <script>
+      feather.replace();
+    </script>
+    <script
+      src="https://code.jquery.com/jquery-3.6.3.js"
+      integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+      integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"
+      integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+    <script src="platLantai.js" type="module"></script>
+    <script src="../../JS/utilities/utilities.js" type="module"></script>
+    <script src="/JS/rumus/besi.js" type="module"></script>
+    <script src="/JS/rumus/material.js" type="module"></script>
+  </body>
+</html>

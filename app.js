@@ -8,6 +8,23 @@ window.onscroll = function () {
   }
 };
 
+// side bar
+const menuToggle = document.querySelector("#toggleKalkulator");
+const nav = document.querySelector("#sideBar ul");
+const navbar = document.querySelector("#navbar");
+
+menuToggle.addEventListener("click", function () {
+  nav.classList.toggle("slide");
+});
+
+document.addEventListener("click", function (e) {
+  if (!menuToggle.contains(e.target) && !navbar.contains(e.target)) {
+    nav.classList.remove("slide");
+  }
+});
+
+// penutup sidebar
+
 const tombolPekerjaan = document.querySelector("#tombolPekerjaanLainnya");
 const iconPekerjaan = document.querySelector("#tombolPekerjaanLainnya i");
 
@@ -27,11 +44,16 @@ tombolPekerjaan.addEventListener("click", function () {
 
 // Jquery Promosi
 $(document).ready(function () {
+  $("#header button").click(function () {
+    const sectionMaterial = $("#menuHitungMaterial").offset().top;
+    $("html").animate({ scrollTop: sectionMaterial - 160 }, 300);
+  });
+
   $(window).scroll(function () {
     if ($(this).scrollTop() > 0) {
-      $("#promoDatabase").fadeOut(500);
+      $("#promoDatabase").fadeOut(300);
     } else {
-      $("#promoDatabase").fadeIn(500);
+      $("#promoDatabase").fadeIn(300);
     }
   });
 });
@@ -43,7 +65,7 @@ const inputMaterial = document.querySelector(
 
 const cardPekerjaan = document.querySelectorAll(".card-pekerjaan");
 
-inputMaterial.addEventListener("keyup", function (e) {
+inputMaterial.addEventListener("keydown", function (e) {
   const input = e.target.value.toLowerCase();
   const button = document.querySelector("#tombolPekerjaanLainnya");
   button.click();

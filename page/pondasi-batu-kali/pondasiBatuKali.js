@@ -7,13 +7,17 @@ const kebPondasiBatuKali = document.querySelectorAll("#kebPondasiBatuKali");
 const tablePondasiBatuKali = document.querySelectorAll("#tablePondasiBatuKali");
 import { materialPondasiBatuKali } from "/JS/rumus/material.js";
 const storageKey = "PONDASIBATUKALI_KEY";
+let inputValidation = false;
 
 document.addEventListener("DOMContentLoaded", function () {
-  let inputIncomplete = false;
   function validateInputs() {
+    if (inputValidation) {
+      inputValidation = false;
+    } else {
+      inputValidation = true;
+    }
     inputs.forEach((input) => {
       if (input.value === "") {
-        inputIncomplete = true;
         input.classList.add("is-invalid");
       }
     });

@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Boots</title>
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
       crossorigin="anonymous"
     />
     <link
@@ -22,7 +22,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,700;1,700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
     <!-- Icon -->
@@ -36,17 +36,28 @@
         <a class="navbar-brand" href="#"
           ><img src="img/logo.png" alt="Sipil Estimator"
         /></a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNavAltMarkup"
-          aria-controls="navbarNavAltMarkup"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
+        <div class="navbar-wrapper">
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <!-- button calculator -->
+          <button
+            class="btn mobile-kalkulator"
+            id="toggleKalkulator"
+            style="background-color: var(--color-primary)"
+          >
+            <i class="fa fa-calculator"></i>
+          </button>
+        </div>
+
         <div
           class="collapse navbar-collapse text-center"
           id="navbarNavAltMarkup"
@@ -59,6 +70,7 @@
           <div class="tombol-kalkulator">
             <button
               class="btn rounded-pill"
+              id="toggleKalkulator"
               style="background-color: var(--color-primary)"
             >
               <i class="fa fa-calculator" style="margin-right: 5px"></i
@@ -68,6 +80,126 @@
         </div>
       </div>
     </nav>
+
+    <section id="sideBar">
+      <ul>
+        <li>
+          <a href="./page/urugan-tanah/index.html"
+            ><img src="./img/SVG/urugan.svg" width="30" /> Urugan Tanah</a
+          >
+        </li>
+        <li>
+          <a href="./page/balok-struktur/index.html"
+            ><img src="./img/SVG/balok.svg" width="25" />Balok Struktur</a
+          >
+        </li>
+        <li>
+          <a href="./page/kolom-struktur/index.html"
+            ><img
+              src="./img/SVG/kolom.svg"
+              alt="kolom-struktur"
+              width="35"
+            />Kolom Struktur</a
+          >
+        </li>
+        <li>
+          <a href="./page/plat-lantai/index.html">
+            <img src="img/SVG/platlantai.svg" width="30" alt="plat-lantai" />
+            Plat Lantai</a
+          >
+        </li>
+        <li>
+          <a href="./page/foot-plat/index.html"
+            ><img src="img/SVG/footplat.svg" width="35" alt="foot plat" />Foot
+            Plat</a
+          >
+        </li>
+        <li>
+          <a href="./page/sloof-struktur/index.html"
+            ><img
+              src="img/SVG/balok.svg"
+              width="30"
+              alt="sloof-struktur"
+            />Sloof Struktur</a
+          >
+        </li>
+        <li>
+          <a href="./page/balok-praktis/index.html">
+            <img
+              src="img/SVG/balokpraktis.svg"
+              width="30"
+              alt="balok-praktis"
+            />Balok Praktis</a
+          >
+        </li>
+        <li>
+          <a href="./page/dindingBataRingan/index.html"
+            ><img src="img/SVG/dinding.svg" width="30" alt="dinding" /> Dinding
+            Bata Ringan</a
+          >
+        </li>
+        <li>
+          <a href="./page/dindingBataMerah/index.html"
+            ><img src="img/SVG/dinding.svg" width="30" alt="dinding" />Dinding
+            Bata Merah</a
+          >
+        </li>
+        <li>
+          <a href="./page/dindingBatako/index.html"
+            ><img src="img/SVG/dinding.svg" width="30" alt="dinding" />Dinding
+            Batako</a
+          >
+        </li>
+        <li>
+          <a href="./page/pondasi-batu-kali/index.html"
+            ><img
+              src="img/SVG/pondasibatukali.svg"
+              width="30"
+              alt="pondasi-batu-kali"
+            />
+            Pondasi Batu Kali</a
+          >
+        </li>
+        <li>
+          <a href="./page/plesteran/index.html"
+            ><img
+              src="img/SVG/plesteran.svg"
+              width="30"
+              alt="plesteran"
+            />Plesteran</a
+          >
+        </li>
+        <li>
+          <a href="./page/acian/index.html"
+            ><img src="img/SVG/acian.svg" width="30" alt="acian" />Acian</a
+          >
+        </li>
+        <li>
+          <a href="./page/lantai/index.html"
+            ><img src="img/SVG/lantai.svg" width="30" alt="lantai" /> Lantai</a
+          >
+        </li>
+        <li>
+          <a href="./page/cat/index.html"
+            ><img src="img/SVG/cat.svg" width="30" alt="cat" />Cat</a
+          >
+        </li>
+        <li>
+          <a href="./page/plafond/index.html"
+            ><img
+              src="img/SVG/plafond.svg"
+              width="30"
+              alt="plafond"
+            />Plafond</a
+          >
+        </li>
+        <li>
+          <a href="./page/atap/index.html"
+            ><img src="img/SVG/atap.svg" width="30" alt="atap" />Atap</a
+          >
+        </li>
+      </ul>
+    </section>
 
     <div class="row" id="promoDatabase">
       <div class="col-12">
@@ -88,7 +220,7 @@
 
     <section id="header" style="margin-top: 5em">
       <div class="container">
-        <div class="row gap-5 align-items-center">
+        <div class="row gap-5">
           <div class="col-sm-6 col-12">
             <div class="content">
               <h5>
@@ -96,8 +228,32 @@
                 >KalkulatorBahanMaterial
               </h5>
               <h1>Menghitung Jadi Mudah Dengan Sipilku Estimate</h1>
-
-              <button class="btn btn-lg rounded-pill">Coba Sekarang</button>
+              <p class="info-header">
+                Anda tidak perlu repot menghitung manual atau memperkirakan
+                anggaran untuk membangun rumah impian dengan Sipilku Estimate.
+              </p>
+              <button>
+                <span style="color: var(--color-black)">Coba Sekarang</span>
+                <svg
+                  width="34"
+                  height="34"
+                  viewBox="0 0 74 74"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <circle
+                    cx="37"
+                    cy="37"
+                    r="35.5"
+                    stroke="black"
+                    stroke-width="3"
+                  ></circle>
+                  <path
+                    d="M25 35.5C24.1716 35.5 23.5 36.1716 23.5 37C23.5 37.8284 24.1716 38.5 25 38.5V35.5ZM49.0607 38.0607C49.6464 37.4749 49.6464 36.5251 49.0607 35.9393L39.5147 26.3934C38.9289 25.8076 37.9792 25.8076 37.3934 26.3934C36.8076 26.9792 36.8076 27.9289 37.3934 28.5147L45.8787 37L37.3934 45.4853C36.8076 46.0711 36.8076 47.0208 37.3934 47.6066C37.9792 48.1924 38.9289 48.1924 39.5147 47.6066L49.0607 38.0607ZM25 38.5L48 38.5V35.5L25 35.5V38.5Z"
+                    fill="black"
+                  ></path>
+                </svg>
+              </button>
             </div>
           </div>
           <div class="col-sm-5 col-12" id="gambarHeader">
@@ -132,153 +288,289 @@
       </div>
     </section>
 
+    <section id="about">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 feature">
+            <div class="content-feature">
+              <h3>Siapakah itu Sipilku Estimate?</h3>
+              <p>
+                Kalkulator online yang dibuat oleh sipilku.id untuk menghitung
+                kebutuhan dan volume material bangunan, telah Membantu
+                profesional konstruksi merencanakan proyek dengan aplikasi
+                kalkulator online untuk kebutuhan bahan dan volume material
+                bangunan, serta berkolaborasi secara fleksibel.
+              </p>
+            </div>
+            <a
+              href="https://www.instagram.com/sipilku.id/"
+              target="_blank"
+              class="img-feature"
+            >
+              <img src="./img/info-sipilku.png" />
+              <button class="followers-sipilku">
+                <i
+                  data-feather="instagram"
+                  style="margin-right: 7px; display: inline-block; height: 100%"
+                ></i>
+                Followers
+                <span class="followers">&nbsp; 1.04K </span>
+              </button>
+            </a>
+          </div>
+          <div class="col-12">
+            <div class="wrapper-feature">
+              <div class="feature">
+                <img src="./img/feature/1.png" width="75" alt="" />
+                <h5>Perhitungan Sesuai Standar</h5>
+              </div>
+              <div class="feature">
+                <img src="./img/feature/2.png" width="75" alt="" />
+                <h5>Ekspor ke Excel</h5>
+              </div>
+              <div class="feature">
+                <img src="./img/feature/3.png" width="75" alt="" />
+                <h5>Konversi Satuan</h5>
+              </div>
+              <div class="feature">
+                <img src="./img/feature/4.png" width="75" alt="" />
+                <h5>Perhitungan yang Akurat</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section id="menuHitungMaterial">
       <div class="container">
         <div class="row">
           <div class="col-12">
-            <h2>Hitung Material Rumah</h2>
-            <div class="group mb-3">
+            <h2 class="text-center">Hitung Material Rumah</h2>
+            <p class="text-muted my-2 mx-auto text-center info-material">
+              Standar perhitungan aplikasi ini mengacu pada ketentuan pemerintah
+              yaitu kementrian PU "Modu 01 rumah ber-SNI"
+            </p>
+            <div class="group mb-4 mt-3">
               <i class="icon" data-feather="search"></i>
               <input placeholder="Search" type="search" class="input" />
             </div>
-            <div class="list-pekerjaan mb-3" id="listPekerjaan">
+            <div class="list-pekerjaan mb-4" id="listPekerjaan">
               <a href="./page/urugan-tanah/index.html" class="card-pekerjaan">
-                <div class="cover-pekerjaan"></div>
+                <img src="./img/SVG/urugan.svg" alt="urugan-tanah" width="60" />
                 <div class="text-pekerjaan">
                   <h4>Urugan Tanah</h4>
-                  <span>Lorem ipsum dolor sit amet.</span>
-                  <i class="fa fa-chevron-right"></i>
+                  <span
+                    >menambahkan lapisan tanah pada suatu area tertentu</span
+                  >
                 </div>
               </a>
 
               <a href="./page/balok-struktur/index.html" class="card-pekerjaan">
-                <div class="cover-pekerjaan"></div>
+                <img
+                  src="./img/SVG/balok.svg"
+                  alt="balok-struktur"
+                  width="36"
+                />
                 <div class="text-pekerjaan">
                   <h4>Balok Struktur</h4>
-                  <span>Lorem ipsum dolor sit amet.</span>
-                  <i class="fa fa-chevron-right"></i>
+                  <span
+                    >Elemen struktural untuk menahan beban vertikal dan
+                    horizontal</span
+                  >
                 </div>
               </a>
 
-              <div class="card-pekerjaan">
-                <div class="cover-pekerjaan"></div>
+              <a href="./page/kolom-struktur/index.html" class="card-pekerjaan">
+                <img
+                  src="./img/SVG/kolom.svg"
+                  alt="kolom-struktur"
+                  width="55"
+                />
                 <div class="text-pekerjaan">
                   <h4>Kolom Struktur</h4>
-                  <span>Lorem ipsum dolor sit amet.</span>
-                  <i class="fa fa-chevron-right"></i>
-                </div>
-              </div>
-
-              <div class="card-pekerjaan">
-                <div class="cover-pekerjaan"></div>
-                <div class="text-pekerjaan">
-                  <h4>Plat Lantai</h4>
-                  <span>Lorem ipsum dolor sit amet.</span>
-                  <i class="fa fa-chevron-right"></i>
-                </div>
-              </div>
-
-              <div class="card-pekerjaan">
-                <div class="cover-pekerjaan"></div>
-                <div class="text-pekerjaan">
-                  <h4>Foot Plat</h4>
-                  <span>Lorem ipsum dolor sit amet.</span>
-                  <i class="fa fa-chevron-right"></i>
-                </div>
-              </div>
-
-              <div class="card-pekerjaan">
-                <div class="cover-pekerjaan"></div>
-                <div class="text-pekerjaan">
-                  <h4>Sloof Struktur</h4>
-                  <span>Lorem ipsum dolor sit amet.</span>
-                  <i class="fa fa-chevron-right"></i>
-                </div>
-              </div>
-
-              <div class="card-pekerjaan collapse" id="collapseExample">
-                <div class="cover-pekerjaan"></div>
-                <div class="text-pekerjaan">
-                  <h4>Beton Praktis</h4>
-                  <span>Lorem ipsum dolor sit amet.</span>
-                  <i class="fa fa-chevron-right"></i>
-                </div>
-              </div>
-
-              <div class="card-pekerjaan collapse" id="collapseExample">
-                <div class="cover-pekerjaan"></div>
-                <div class="text-pekerjaan">
-                  <h4>Dinding</h4>
-                  <span>Lorem ipsum dolor sit amet.</span>
-                  <i class="fa fa-chevron-right"></i>
-                </div>
-              </div>
-
-              <a
-                href="./page/pondasi-batu-kali/index.html"
-                class="card-pekerjaan collapse"
-                id="collapseExample"
-              >
-                <div class="cover-pekerjaan"></div>
-                <div class="text-pekerjaan">
-                  <h4>Pondasi Batu Kali</h4>
-                  <span>Lorem ipsum dolor sit amet.</span>
-                  <i class="fa fa-chevron-right"></i>
+                  <span
+                    >Elemen struktural vertikal untuk menahan beban dari
+                    struktur di atasnya</span
+                  >
                 </div>
               </a>
 
-              <div class="card-pekerjaan collapse" id="collapseExample">
-                <div class="cover-pekerjaan"></div>
+              <a href="./page/plat-lantai/index.html" class="card-pekerjaan">
+                <img
+                  src="img/SVG/platlantai.svg"
+                  width="50"
+                  alt="plat-lantai"
+                />
                 <div class="text-pekerjaan">
-                  <h4>Plesteran</h4>
-                  <span>Lorem ipsum dolor sit amet.</span>
-                  <i class="fa fa-chevron-right"></i>
+                  <h4>Plat Lantai</h4>
+                  <span
+                    >Elemen datar menahan beban di antara dinding atau balok
+                    struktural</span
+                  >
                 </div>
+              </a>
+
+              <a href="./page/foot-plat/index.html" class="card-pekerjaan">
+                <img src="img/SVG/footplat.svg" width="55" alt="foot plat" />
+                <div class="text-pekerjaan">
+                  <h4>Foot Plat</h4>
+                  <span>struktur yang menyalurkan beban pada tanah</span>
+                </div>
+              </a>
+
+              <a href="./page/sloof-struktur/index.html" class="card-pekerjaan">
+                <img src="img/SVG/balok.svg" width="40" alt="sloof-struktur" />
+                <div class="text-pekerjaan">
+                  <h4>Sloof Struktur</h4>
+                  <span>menghubungkan kolom dan balok struktural</span>
+                </div>
+              </a>
+
+              <div class="collapse" id="collapseExample">
+                <a
+                  href="./page/balok-praktis/index.html"
+                  class="card-pekerjaans"
+                >
+                  <img
+                    src="img/SVG/balokpraktis.svg"
+                    width="40"
+                    alt="balok-praktis"
+                  />
+                  <div class="text-pekerjaan">
+                    <h4>Balok Praktis</h4>
+                    <span
+                      >fleksibel dalam penggunaan ukuran dan panjang untuk
+                      memudahkan konstruksi</span
+                    >
+                  </div>
+                </a>
               </div>
 
-              <div class="card-pekerjaan collapse" id="collapseExample">
-                <div class="cover-pekerjaan"></div>
-                <div class="text-pekerjaan">
-                  <h4>Acian</h4>
-                  <span>Lorem ipsum dolor sit amet.</span>
-                  <i class="fa fa-chevron-right"></i>
-                </div>
+              <div class="collapse" id="collapseExample">
+                <a
+                  href="./page/dindingBataRingan/index.html"
+                  class="card-pekerjaans"
+                >
+                  <img src="img/SVG/dinding.svg" width="50" alt="dinding" />
+                  <div class="text-pekerjaan">
+                    <h4>Dinding Bata Ringan</h4>
+                    <span>pemasangan dengan bahan dukung perekat mortar</span>
+                  </div>
+                </a>
               </div>
 
-              <div class="card-pekerjaan collapse" id="collapseExample">
-                <div class="cover-pekerjaan"></div>
-                <div class="text-pekerjaan">
-                  <h4>Lantai</h4>
-                  <span>Lorem ipsum dolor sit amet.</span>
-                  <i class="fa fa-chevron-right"></i>
-                </div>
+              <div class="collapse" id="collapseExample">
+                <a
+                  href="./page/dindingBataMerah/index.html"
+                  class="card-pekerjaans"
+                >
+                  <img src="img/SVG/dinding.svg" width="50" alt="dinding" />
+                  <div class="text-pekerjaan">
+                    <h4>Dinding Bata Merah</h4>
+                    <span>pemasangan dengan bahan dukung semen & pasir</span>
+                  </div>
+                </a>
               </div>
 
-              <div class="card-pekerjaan collapse" id="collapseExample">
-                <div class="cover-pekerjaan"></div>
-                <div class="text-pekerjaan">
-                  <h4>Cat</h4>
-                  <span>Lorem ipsum dolor sit amet.</span>
-                  <i class="fa fa-chevron-right"></i>
-                </div>
+              <div class="collapse" id="collapseExample">
+                <a
+                  href="./page/dindingBatako/index.html"
+                  class="card-pekerjaans"
+                >
+                  <img src="img/SVG/dinding.svg" width="50" alt="dinding" />
+                  <div class="text-pekerjaan">
+                    <h4>Dinding Batako</h4>
+                    <span>pemasangan dengan bahan dukung semen & pasir</span>
+                  </div>
+                </a>
               </div>
 
-              <div class="card-pekerjaan collapse" id="collapseExample">
-                <div class="cover-pekerjaan"></div>
-                <div class="text-pekerjaan">
-                  <h4>Plafond</h4>
-                  <span>Lorem ipsum dolor sit amet.</span>
-                  <i class="fa fa-chevron-right"></i>
-                </div>
+              <div class="collapse" id="collapseExample">
+                <a
+                  href="./page/pondasi-batu-kali/index.html"
+                  class="card-pekerjaans"
+                >
+                  <img
+                    src="img/SVG/pondasibatukali.svg"
+                    width="45"
+                    alt="pondasi-batu-kali"
+                  />
+                  <div class="text-pekerjaan">
+                    <h4>Pondasi Batu Kali</h4>
+                    <span>menggunakan batu kali sebagai penopang struktur</span>
+                  </div>
+                </a>
               </div>
 
-              <div class="card-pekerjaan collapse" id="collapseExample">
-                <div class="cover-pekerjaan"></div>
-                <div class="text-pekerjaan">
-                  <h4>Atap</h4>
-                  <span>Lorem ipsum dolor sit amet.</span>
-                  <i class="fa fa-chevron-right"></i>
-                </div>
+              <div class="collapse" id="collapseExample">
+                <a href="./page/plesteran/index.html" class="card-pekerjaans">
+                  <img src="img/SVG/plesteran.svg" width="50" alt="plesteran" />
+                  <div class="text-pekerjaan">
+                    <h4>Plesteran</h4>
+                    <span
+                      >menghaluskan dan memperbaiki permukaan dinding atau
+                      lantai</span
+                    >
+                  </div>
+                </a>
+              </div>
+
+              <div class="collapse" id="collapseExample">
+                <a href="./page/acian/index.html" class="card-pekerjaans">
+                  <img src="img/SVG/acian.svg" width="50" alt="acian" />
+                  <div class="text-pekerjaan">
+                    <h4>Acian</h4>
+                    <span
+                      >Haluskan & perbaiki dinding/lantai setelah plester</span
+                    >
+                  </div>
+                </a>
+              </div>
+
+              <div class="collapse" id="collapseExample">
+                <a href="./page/lantai/index.html" class="card-pekerjaans">
+                  <img src="img/SVG/lantai.svg" width="50" alt="lantai" />
+                  <div class="text-pekerjaan">
+                    <h4>Lantai</h4>
+                    <span>permukaan horizontal pada bangunan</span>
+                  </div>
+                </a>
+              </div>
+
+              <div class="collapse" id="collapseExample">
+                <a href="./page/cat/index.html" class="card-pekerjaans">
+                  <img src="img/SVG/cat.svg" width="50" alt="cat" />
+                  <div class="text-pekerjaan">
+                    <h4>Cat</h4>
+                    <span>pewarna dan pelindung permukaan</span>
+                  </div>
+                </a>
+              </div>
+
+              <div class="collapse" id="collapseExample">
+                <a href="./page/plafond/index.html" class="card-pekerjaans">
+                  <img src="img/SVG/plafond.svg" width="50" alt="plafond" />
+                  <div class="text-pekerjaan">
+                    <h4>Plafond</h4>
+                    <span
+                      >permukaan horizontal yang membentuk langit-langit</span
+                    >
+                  </div>
+                </a>
+              </div>
+
+              <div class="collapse" id="collapseExample">
+                <a href="./page/atap/index.html" class="card-pekerjaans">
+                  <img src="img/SVG/atap.svg" width="50" alt="atap" />
+                  <div class="text-pekerjaan">
+                    <h4>Atap</h4>
+                    <span
+                      >struktur penutup untuk melindungi bangunan dari
+                      cuaca</span
+                    >
+                  </div>
+                </a>
               </div>
             </div>
           </div>
@@ -290,7 +582,8 @@
               id="tombolPekerjaanLainnya"
               type="button"
               data-bs-toggle="collapse"
-              data-bs-target="#collapseExample"
+              href="#collapseExample"
+              role="button"
               aria-expanded="false"
               aria-controls="collapseExample"
             >
@@ -311,10 +604,11 @@
       crossorigin="anonymous"
     ></script>
     <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
       crossorigin="anonymous"
     ></script>
+
     <script src="app.js"></script>
     <script type="text/javascript" src="vanilla-tilt.min.js"></script>
     <script type="text/javascript">

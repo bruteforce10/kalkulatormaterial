@@ -1,5 +1,5 @@
 // menghapus class invalid
-import { form, inputs } from "../../page/balok-struktur/balokStruktur.js";
+import { form, inputs } from "/page/kolom-struktur/kolomStruktur.js";
 
 const inputValid = () => {
   for (const input of inputs) {
@@ -28,7 +28,8 @@ function exportToExcel(type, fn, dl) {
     : XLSX.writeFile(wb, fn || "Kebutuhan Material Balok." + (type || "xlsx"));
 }
 
-document.querySelector("#buttonExportExcel").onclick = function () {
+document.querySelector("#buttonExportExcel").onclick = function (e) {
+  e.preventDefault();
   exportToExcel("xlsx");
 };
 
