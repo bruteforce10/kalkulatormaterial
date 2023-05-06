@@ -147,7 +147,7 @@ function getVolume() {
       arry.push(volume);
     }
 
-    if (!kebBalokPraktis) {
+    if (kebBalokPraktis) {
       for (let x = 0; x < arry.length; x++) {
         kebBalokPraktis[x].innerHTML = `${arry[x]}`;
       }

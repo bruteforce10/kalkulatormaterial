@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", () => {
       this.tulanganArahY = generateTulSengkang(inputs[9].value);
       this.jarakSengkangX = inputs[10].value * inputs[11].value;
       this.jarakSengkangY = inputs[12].value * inputs[13].value;
-      this.campuranMaterial = generateMaterial(inputs[14].value);
+      this.campuranMaterialPlat = generateMaterial(inputs[14].value);
     }
 
     volumePekerjaanPlatLantai(output) {
@@ -73,19 +73,19 @@ document.addEventListener("DOMContentLoaded", () => {
       // Perhitungan Material
       // Semen
       let volKebutuhanSemen = Math.round(
-        volPengecoran * this.campuranMaterial[1]
+        volPengecoran * this.campuranMaterialPlat[1]
       );
       output[3].innerHTML = `<span>${Math.round(
         volKebutuhanSemen / 50
       )} zak atau ${volKebutuhanSemen} buah semen</span>`;
       // pasir
       let volKebutuhanPasir = Math.round(
-        volPengecoran * this.campuranMaterial[0]
+        volPengecoran * this.campuranMaterialPlat[0]
       );
       output[4].innerHTML = `<span>${volKebutuhanPasir} kg</span>`;
       // Krikil
       let volKebutuhanKrikil = Math.round(
-        volPengecoran * this.campuranMaterial[2]
+        volPengecoran * this.campuranMaterialPlat[2]
       );
       output[5].innerHTML = `<span>${volKebutuhanKrikil} kg</span>`;
       // Besi Sengkang

@@ -52,7 +52,9 @@ document.addEventListener("DOMContentLoaded", () => {
       this.jumlahTulanganUtama = inputs[10].value;
       this.jarakSengkang = inputs[11].value;
       this.satuanJarakSengkang = inputs[12].value;
-      this.campuranMaterial = generateMaterial(inputs[13].value);
+      this.campuranMaterial =
+        generateMaterial(inputs[13].value) ||
+        generateMaterial(inputs[14].value);
     }
 
     volumePekerjaanKolomStruktur(output) {
@@ -165,7 +167,7 @@ document.addEventListener("DOMContentLoaded", () => {
     validateInputs();
 
     const perhitunganKolom = new PerhitunganKolom(inputs);
-    if (!inputValidation && this.tulanganUtama === "") {
+    if (!inputValidation) {
       perhitunganKolom.volumePekerjaanKolomStruktur(kebKolomStruktur);
       perhitunganKolom.volumePekerjaanKolomStruktur(tableKolomStrukutur);
     }

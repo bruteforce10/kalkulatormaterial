@@ -11,6 +11,7 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="sloof-struktur.css" />
+    <link rel="stylesheet" href="/nav-footer/style.css" />
     <!-- Export XLS Javascript -->
     <script
       type="text/javascript"
@@ -18,38 +19,57 @@
     ></script>
     <!-- Icon -->
     <script src="https://unpkg.com/feather-icons"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
 
   <body>
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg pt-3 sticky-top" id="navbar">
       <div class="container position-relative">
-        <a class="navbar-brand" href="../../index.html"
-          ><img src="../../img/logo.png" alt="Sipil Estimator"
+        <a class="navbar-brand" href="/index.html"
+          ><img src="/img/logo.png" alt="Sipil Estimator"
         /></a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNavAltMarkup"
-          aria-controls="navbarNavAltMarkup"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
+        <div class="navbar-wrapper">
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <!-- button calculator -->
+          <button
+            class="btn mobile-kalkulator"
+            id="toggleKalkulatorMobile"
+            style="background-color: var(--color-primary)"
+          >
+            <i class="fa fa-calculator"></i>
+          </button>
+        </div>
+
         <div
           class="collapse navbar-collapse text-center"
           id="navbarNavAltMarkup"
         >
           <div class="navbar-nav">
-            <a class="nav-link" href="#">Features</a>
-            <a class="nav-link" href="#">suggestion</a>
+            <a class="nav-link" href="/index.html#about">Tentang</a>
+            <a class="nav-link" href="/index.html#suggestion">Kotak Saran</a>
             <a class="nav-link" href="#">Get App</a>
           </div>
           <div class="tombol-kalkulator">
             <button
               class="btn rounded-pill"
+              id="toggleKalkulator"
               style="background-color: var(--color-primary)"
             >
               <i class="fa fa-calculator" style="margin-right: 5px"></i
@@ -59,6 +79,126 @@
         </div>
       </div>
     </nav>
+    <section id="sideBar">
+      <ul>
+        <li>
+          <a href="/page/urugan-tanah/index.html"
+            ><img src="/img/SVG/urugan.svg" width="30" /> Urugan Tanah</a
+          >
+        </li>
+        <li>
+          <a href="/page/balok-struktur/index.html"
+            ><img src="/img/SVG/balok.svg" width="25" />Balok Struktur</a
+          >
+        </li>
+        <li>
+          <a href="/page/kolom-struktur/index.html"
+            ><img
+              src="/img/SVG/kolom.svg"
+              alt="kolom-struktur"
+              width="35"
+            />Kolom Struktur</a
+          >
+        </li>
+        <li>
+          <a href="/page/plat-lantai/index.html">
+            <img src="/img/SVG/platlantai.svg" width="30" alt="plat-lantai" />
+            Plat Lantai</a
+          >
+        </li>
+        <li>
+          <a href="/page/foot-plat/index.html"
+            ><img src="/img/SVG/footplat.svg" width="35" alt="foot plat" />Foot
+            Plat</a
+          >
+        </li>
+        <li>
+          <a href="/page/sloof-struktur/index.html"
+            ><img
+              src="/img/SVG/balok.svg"
+              width="30"
+              alt="sloof-struktur"
+            />Sloof Struktur</a
+          >
+        </li>
+        <li>
+          <a href="/page/balok-praktis/index.html">
+            <img
+              src="/img/SVG/balokpraktis.svg"
+              width="30"
+              alt="balok-praktis"
+            />Balok Praktis</a
+          >
+        </li>
+        <li>
+          <a href="/page/dindingBataRingan/index.html"
+            ><img src="/img/SVG/dinding.svg" width="30" alt="dinding" /> Dinding
+            Bata Ringan</a
+          >
+        </li>
+        <li>
+          <a href="/page/dindingBataMerah/index.html"
+            ><img src="/img/SVG/dinding.svg" width="30" alt="dinding" />Dinding
+            Bata Merah</a
+          >
+        </li>
+        <li>
+          <a href="/page/dindingBatako/index.html"
+            ><img src="/img/SVG/dinding.svg" width="30" alt="dinding" />Dinding
+            Batako</a
+          >
+        </li>
+        <li>
+          <a href="/page/pondasi-batu-kali/index.html"
+            ><img
+              src="/img/SVG/pondasibatukali.svg"
+              width="30"
+              alt="pondasi-batu-kali"
+            />
+            Pondasi Batu Kali</a
+          >
+        </li>
+        <li>
+          <a href="/page/plesteran/index.html"
+            ><img
+              src="/img/SVG/plesteran.svg"
+              width="30"
+              alt="plesteran"
+            />Plesteran</a
+          >
+        </li>
+        <li>
+          <a href="/page/acian/index.html"
+            ><img src="/img/SVG/acian.svg" width="30" alt="acian" />Acian</a
+          >
+        </li>
+        <li>
+          <a href="/page/lantai/index.html"
+            ><img src="/img/SVG/lantai.svg" width="30" alt="lantai" /> Lantai</a
+          >
+        </li>
+        <li>
+          <a href="/page/cat/index.html"
+            ><img src="/img/SVG/cat.svg" width="30" alt="cat" />Cat</a
+          >
+        </li>
+        <li>
+          <a href="/page/plafond/index.html"
+            ><img
+              src="/img/SVG/plafond.svg"
+              width="30"
+              alt="plafond"
+            />Plafond</a
+          >
+        </li>
+        <li>
+          <a href="/page/atap/index.html"
+            ><img src="/img/SVG/atap.svg" width="30" alt="atap" />Atap</a
+          >
+        </li>
+      </ul>
+    </section>
+    <!-- Penutup Navbar -->
 
     <div class="container mt-5">
       <div class="fs-1 mb-1 text-center fw-bold">Sloof Struktur</div>
@@ -537,6 +677,66 @@
           </div>
         </div>
       </form>
+      <!-- footer -->
+      <footer>
+        <div class="container">
+          <div class="logo-footer">
+            <p>Dibuat Oleh:</p>
+            <img src="/img/sipilkuid.png" alt="logo sipilku id" />
+          </div>
+          <div class="socialmedia-footer">
+            <p>Social Media:</p>
+            <ul>
+              <li>
+                <a target="_blank" href="https://www.instagram.com/sipilku.id/">
+                  <i
+                    data-feather="instagram"
+                    style="margin-right: 14px; width: 10%"
+                  ></i
+                  >Instagram</a
+                >
+              </li>
+              <li>
+                <a
+                  target="_blank"
+                  href="https://api.whatsapp.com/send?phone=628816101512"
+                  ><i
+                    class="fa-brands fa-whatsapp"
+                    style="margin-right: 14px; font-size: 120%"
+                  ></i
+                  >whatsapp</a
+                >
+              </li>
+              <li>
+                <a href="#">
+                  <i
+                    data-feather="mail"
+                    style="margin-right: 14px; width: 10%"
+                  ></i
+                  >sipilku@driveku.me</a
+                >
+              </li>
+              <li>
+                <a target="_blank" href="#"
+                  ><i
+                    class="fa fa-location-dot"
+                    style="margin-right: 14px; width: 10%"
+                  ></i
+                  >Jakarta Selatan</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-end">
+          <p>© 2023 Sipiku Estimate. All rights reserved.</p>
+          <p>
+            Assets by
+            <a href="https://www.freepik.com/" target="_blank">Freepik</a>
+          </p>
+        </div>
+      </footer>
+      <!-- penutup footer -->
     </div>
     <script>
       feather.replace();
@@ -547,20 +747,11 @@
       crossorigin="anonymous"
     ></script>
     <script
-      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
-      integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
       crossorigin="anonymous"
     ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"
-      integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
-      crossorigin="anonymous"
-    ></script>
+    <script src="/nav-footer/script.js"></script>
     <script src="sloofStruktur.js" type="module"></script>
     <script src="../../JS/utilities/utilities.js" type="module"></script>
     <script src="/JS/rumus/besi.js" type="module"></script>

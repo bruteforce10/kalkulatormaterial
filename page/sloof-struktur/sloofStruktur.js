@@ -188,7 +188,7 @@ function getVolume() {
       arry.push(volume);
     }
 
-    if (!kebSloofStruktur) {
+    if (kebSloofStruktur) {
       for (let x = 0; x < arry.length; x++) {
         kebSloofStruktur[x].innerHTML = `${arry[x]}`;
       }

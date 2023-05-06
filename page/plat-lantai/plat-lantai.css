@@ -119,6 +119,12 @@ label {
     margin-top: 1rem;
     margin-bottom: 1rem;
   }
+
+  .img-volume img {
+    height: 13rem;
+    object-fit: contain;
+    display: block;
+  }
 }
 
 /* Hobile */

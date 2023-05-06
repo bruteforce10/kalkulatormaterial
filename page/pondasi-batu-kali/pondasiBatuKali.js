@@ -75,7 +75,7 @@ document.addEventListener("DOMContentLoaded", function () {
     e.preventDefault();
     validateInputs();
     const perhitunganPondasiBatuKali = new PerhitunganPondasiBatuKali(inputs);
-    if (!inputIncomplete) {
+    if (!inputValidation) {
       perhitunganPondasiBatuKali.volPondasiBatuKali(kebPondasiBatuKali);
       perhitunganPondasiBatuKali.volPondasiBatuKali(tablePondasiBatuKali);
     }

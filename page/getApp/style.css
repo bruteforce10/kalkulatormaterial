@@ -1,0 +1,41 @@
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+  --color-primary: #f2c94c;
+  --color-secondary: #f9f9fb;
+  --color-black: #0e0e0e;
+  --color-blue: #06234e;
+  --color-bluesoft: #98bbde;
+}
+
+/* Nav */
+.container .navbar-brand img {
+  width: 100px;
+}
+
+.tombol-kalkulator {
+  position: absolute;
+  right: 0;
+}
+
+/* Media Queries */
+
+/* Laptop */
+@media (max-width: 1366px) {
+  html {
+    font-size: 95%;
+  }
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  html {
+    font-size: 95%;
+  }
+}
+
+/* Hobile */
+@media (max-width: 450px) {
+}

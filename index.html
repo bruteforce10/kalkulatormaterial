@@ -27,6 +27,13 @@
     />
     <!-- Icon -->
     <script src="https://unpkg.com/feather-icons"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
 
   <body>
@@ -51,7 +58,7 @@
           <!-- button calculator -->
           <button
             class="btn mobile-kalkulator"
-            id="toggleKalkulator"
+            id="toggleKalkulatorMobile"
             style="background-color: var(--color-primary)"
           >
             <i class="fa fa-calculator"></i>
@@ -63,8 +70,8 @@
           id="navbarNavAltMarkup"
         >
           <div class="navbar-nav">
-            <a class="nav-link" href="#">Features</a>
-            <a class="nav-link" href="#">suggestion</a>
+            <a class="nav-link" href="#about">Tentang</a>
+            <a class="nav-link" href="#suggestion">Kotak Saran</a>
             <a class="nav-link" href="#">Get App</a>
           </div>
           <div class="tombol-kalkulator">
@@ -232,7 +239,7 @@
                 Anda tidak perlu repot menghitung manual atau memperkirakan
                 anggaran untuk membangun rumah impian dengan Sipilku Estimate.
               </p>
-              <button>
+              <button class="btn-costum">
                 <span style="color: var(--color-black)">Coba Sekarang</span>
                 <svg
                   width="34"
@@ -594,6 +601,213 @@
         </div>
       </div>
     </section>
+
+    <section id="suggestion">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-6 col-12">
+            <div class="suggest-info">
+              <h2>Kotak Saran</h2>
+              <p class="text-muted mt-3">
+                Setiap masukan dari Anda sangat berharga bagi sipilku estimate
+                untuk membantu meningkatkan aplikasi Sipilku Estimate. sehingga
+                dapat memberikan manfaat yang lebih besar bagi pengguna
+              </p>
+            </div>
+            <div class="suggest-follow">
+              <img
+                src="img/sipilkuid.png"
+                width="80"
+                class="img-sipilku"
+                alt="teknik sipil by sipilku"
+              />
+              <p>
+                Jangan lupa untuk follow sipiku.id ya, agar bisa mendapatkan
+                informasi terbaru seputar ilmu teknik sipil dan arsitektur
+              </p>
+              <button
+                onclick="window.open('https://www.instagram.com/sipilku.id/', '_blank')"
+              >
+                <i
+                  data-feather="instagram"
+                  style="display: inline-block; height: 100%"
+                ></i>
+                <span>Instagram</span>
+              </button>
+            </div>
+          </div>
+          <div
+            class="col-sm-6 col-12 d-flex flex-column align-items-end mt-3 mt-lg-0"
+          >
+            <div
+              class="rounded-4 alert alert-warning alert-dismissible fade show my-alert d-none"
+              role="alert"
+            >
+              Terima kasih atas
+              <strong>kontribusi dan partisipasi</strong> Anda!
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="alert"
+                aria-label="Close"
+              ></button>
+            </div>
+            <form name="suggestion">
+              <div class="form-floating mb-3">
+                <input
+                  type="text"
+                  name="nama"
+                  class="form-control input-form"
+                  id="floatingInput"
+                  placeholder="nama"
+                />
+                <label for="floatingInput">Nama Anda</label>
+              </div>
+              <div class="form-floating mb-3">
+                <input
+                  type="number"
+                  name="nomor"
+                  class="form-control input-form"
+                  id="floatingInput"
+                  placeholder="nama"
+                />
+                <label for="floatingInput">Nomor Whatsapp</label>
+              </div>
+              <div class="form-floating mb-4">
+                <textarea
+                  class="form-control input-form"
+                  placeholder="Leave a comment here"
+                  id="floatingTextarea2"
+                  style="height: 100px"
+                  name="pesan"
+                ></textarea>
+                <label for="floatingTextarea2">Comments</label>
+              </div>
+              <button
+                type="submit"
+                class="btn-costum btn-kirim"
+                style="border: 1px solid var(--color-black)"
+              >
+                <span style="color: var(--color-black)">Submit</span>
+                <svg
+                  width="34"
+                  height="34"
+                  viewBox="0 0 74 74"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <circle
+                    cx="37"
+                    cy="37"
+                    r="35.5"
+                    stroke="black"
+                    stroke-width="3"
+                  ></circle>
+                  <path
+                    d="M25 35.5C24.1716 35.5 23.5 36.1716 23.5 37C23.5 37.8284 24.1716 38.5 25 38.5V35.5ZM49.0607 38.0607C49.6464 37.4749 49.6464 36.5251 49.0607 35.9393L39.5147 26.3934C38.9289 25.8076 37.9792 25.8076 37.3934 26.3934C36.8076 26.9792 36.8076 27.9289 37.3934 28.5147L45.8787 37L37.3934 45.4853C36.8076 46.0711 36.8076 47.0208 37.3934 47.6066C37.9792 48.1924 38.9289 48.1924 39.5147 47.6066L49.0607 38.0607ZM25 38.5L48 38.5V35.5L25 35.5V38.5Z"
+                    fill="black"
+                  ></path>
+                </svg>
+              </button>
+              <button
+                type="submit"
+                class="btn-costum btn-loading d-none"
+                style="border: 1px solid var(--color-black)"
+              >
+                <span style="color: var(--color-black)">
+                  <span
+                    class="spinner-border spinner-border-sm"
+                    role="status"
+                    aria-hidden="true"
+                  ></span>
+                  Loading...</span
+                >
+                <svg
+                  width="34"
+                  height="34"
+                  viewBox="0 0 74 74"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <circle
+                    cx="37"
+                    cy="37"
+                    r="35.5"
+                    stroke="black"
+                    stroke-width="3"
+                  ></circle>
+                  <path
+                    d="M25 35.5C24.1716 35.5 23.5 36.1716 23.5 37C23.5 37.8284 24.1716 38.5 25 38.5V35.5ZM49.0607 38.0607C49.6464 37.4749 49.6464 36.5251 49.0607 35.9393L39.5147 26.3934C38.9289 25.8076 37.9792 25.8076 37.3934 26.3934C36.8076 26.9792 36.8076 27.9289 37.3934 28.5147L45.8787 37L37.3934 45.4853C36.8076 46.0711 36.8076 47.0208 37.3934 47.6066C37.9792 48.1924 38.9289 48.1924 39.5147 47.6066L49.0607 38.0607ZM25 38.5L48 38.5V35.5L25 35.5V38.5Z"
+                    fill="black"
+                  ></path>
+                </svg>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- footer -->
+    <footer>
+      <div class="container">
+        <div class="logo-footer">
+          <p>Dibuat Oleh:</p>
+          <img src="/img/sipilkuid.png" alt="logo sipilku id" />
+        </div>
+        <div class="socialmedia-footer">
+          <p>Social Media:</p>
+          <ul>
+            <li>
+              <a target="_blank" href="https://www.instagram.com/sipilku.id/">
+                <i
+                  data-feather="instagram"
+                  style="margin-right: 14px; width: 10%"
+                ></i
+                >Instagram</a
+              >
+            </li>
+            <li>
+              <a
+                target="_blank"
+                href="https://api.whatsapp.com/send?phone=628816101512"
+                ><i
+                  class="fa-brands fa-whatsapp"
+                  style="margin-right: 14px; font-size: 120%"
+                ></i
+                >whatsapp</a
+              >
+            </li>
+            <li>
+              <a href="#">
+                <i
+                  data-feather="mail"
+                  style="margin-right: 14px; width: 10%"
+                ></i
+                >sipilku@driveku.me</a
+              >
+            </li>
+            <li>
+              <a target="_blank" href="#"
+                ><i
+                  class="fa fa-location-dot"
+                  style="margin-right: 14px; width: 10%"
+                ></i
+                >Jakarta Selatan</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-end">
+        <p>© 2023 Sipiku Estimate. All rights reserved.</p>
+        <p>
+          Assets by
+          <a href="https://www.freepik.com/" target="_blank">Freepik</a>
+        </p>
+      </div>
+    </footer>
+    <!-- penutup footer -->
 
     <script>
       feather.replace();

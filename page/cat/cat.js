@@ -33,9 +33,9 @@ document.addEventListener("DOMContentLoaded", function () {
     volCat(output) {
       const luas = parseFloat((this.panjang * this.tinggi).toFixed(3));
       const cat = materialCat(this.materialCat, luas);
-      output[0].innerHTML = `${luas}`;
+      output[0].innerHTML = `${luas} m<sup>2</sup>`;
       output[1].innerHTML = `${cat}`;
-      putVolume(`${luas}`, `${cat}`);
+      putVolume(`${luas} m<sup>2</sup>`, `${cat}`);
     }
   }
 
