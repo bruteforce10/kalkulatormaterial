@@ -96,8 +96,10 @@
         >
           <div class="navbar-nav">
             <a class="nav-link" href="#about">Tentang</a>
+            <a class="nav-link" href="./page/getApp/index.html" id="getAppLink"
+              >Get App</a
+            >
             <a class="nav-link" href="#suggestion">Kotak Saran</a>
-            <a class="nav-link" href="#">Get App</a>
           </div>
           <div class="tombol-kalkulator">
             <button
@@ -855,6 +857,14 @@
         max: 25,
         speed: 400,
       });
+    </script>
+    <script>
+      document
+        .getElementById("getAppLink")
+        .addEventListener("click", function (event) {
+          event.preventDefault(); // Mencegah perilaku default dari link
+          window.location.href = "./page/getApp/index.html"; // Mengarahkan pengguna ke halaman "Get App"
+        });
     </script>
   </body>
 </html>
